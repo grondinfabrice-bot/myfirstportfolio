@@ -231,8 +231,8 @@ export const projects: Project[] = [
     images: ["/projects/terre-sauvage-home.jpg"],
   },
   {
-    slug: "studio-booking",
-    title: "Studio Booking",
+    slug: "kaza-reza",
+    title: "Kaza Reza",
     category: "Application web",
     status: "Idée / concept",
     summary: "Application de réservation de créneaux pour studio d'enregistrement.",
@@ -240,7 +240,7 @@ export const projects: Project[] = [
     problem:
       "La réservation de créneaux studio peut vite devenir chaotique lorsqu'elle passe par messages, appels et notes séparées.",
     solution:
-      "Studio Booking propose un système simple de disponibilités, réservation, gestion admin et notifications.",
+      "Kaza Reza propose un système simple de disponibilités, réservation, gestion admin et notifications.",
     role: ["Conception produit", "UX réservation", "Architecture"],
     features: ["Calendrier", "Réservation", "Disponibilités", "Gestion admin", "Notifications"],
     stack: ["Next.js", "Supabase", "PostgreSQL", "Auth"],
