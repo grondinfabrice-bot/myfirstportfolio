@@ -2,7 +2,7 @@ import { SectionHeader } from "@/components/SectionHeader";
 
 export default function AboutPage() {
   return (
-    <section className="bg-paper py-16 md:py-24">
+    <section className="bg-paper pt-11 pb-16 md:pt-[76px] md:pb-24">
       <div className="mx-auto max-w-4xl px-5 md:px-8">
         <SectionHeader eyebrow="À propos" title="Une pratique entre image, produit web et outils utiles." />
         <div className="mt-8 space-y-6 text-lg leading-8 text-graphite">

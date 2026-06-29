@@ -4,7 +4,7 @@ import { projectCategories, projects } from "@/data/projects";
 
 export default function ProjectsPage() {
   return (
-    <section className="bg-paper py-16 md:py-24">
+    <section className="bg-paper pt-11 pb-16 md:pt-[76px] md:pb-24">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="grid gap-8 lg:grid-cols-[1fr_360px] lg:items-end">
           <SectionHeader

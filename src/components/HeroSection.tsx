@@ -5,7 +5,7 @@ export function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-paper">
       <div className="absolute inset-0 opacity-[0.28] [background-image:linear-gradient(rgba(39,56,74,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(39,56,74,0.12)_1px,transparent_1px)] [background-size:44px_44px]" />
-      <div className="mx-auto grid min-h-[calc(100vh-73px)] max-w-7xl items-center gap-12 px-5 py-16 md:grid-cols-[1.1fr_0.9fr] md:px-8 md:py-24">
+      <div className="mx-auto grid min-h-[calc(100vh-73px)] max-w-7xl items-start gap-12 px-5 pt-11 pb-16 md:grid-cols-[1.1fr_0.9fr] md:px-8 md:pt-[76px] md:pb-24">
         <div className="relative">
           <p className="font-mono text-sm font-bold uppercase text-tomato">
             Une fabrique de sites, d'apps et d'automatisations utiles
@@ -32,7 +32,7 @@ export function HeroSection() {
               href="/contact"
               className="inline-flex items-center gap-2 rounded-full border border-fog bg-cream/70 px-5 py-3 text-sm font-bold text-ink transition hover:border-tomato hover:text-tomato"
             >
-              Discuter d'un outil
+              Parler de mon projet
             </Link>
           </div>
         </div>

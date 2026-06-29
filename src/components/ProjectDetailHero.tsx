@@ -9,7 +9,7 @@ type ProjectDetailHeroProps = {
 
 export function ProjectDetailHero({ project }: ProjectDetailHeroProps) {
   return (
-    <section className="bg-paper py-14 md:py-20">
+    <section className="bg-paper pt-9 pb-14 md:pt-[60px] md:pb-20">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-[0.9fr_1.1fr] md:px-8">
         <div>
           <p className="font-mono text-sm font-bold uppercase text-tomato">{project.category}</p>

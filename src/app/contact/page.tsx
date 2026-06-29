@@ -8,7 +8,7 @@ export default function ContactPage() {
   const [sent, setSent] = useState(false);
 
   return (
-    <section className="bg-paper py-16 md:py-24">
+    <section className="bg-paper pt-11 pb-16 md:pt-[76px] md:pb-24">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-[0.8fr_1.2fr] md:px-8">
         <SectionHeader
           eyebrow="Contact"

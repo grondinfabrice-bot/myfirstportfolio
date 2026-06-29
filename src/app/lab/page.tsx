@@ -8,7 +8,7 @@ export default function LabPage() {
   const labProject = getProjectBySlug("lab-vps-infrastructure");
 
   return (
-    <section className="bg-paper py-16 md:py-24">
+    <section className="bg-paper pt-11 pb-16 md:pt-[76px] md:pb-24">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeader
           eyebrow="Lab technique"
