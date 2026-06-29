@@ -1,0 +1,11 @@
+type StatusBadgeProps = {
+  children: React.ReactNode;
+};
+
+export function StatusBadge({ children }: StatusBadgeProps) {
+  return (
+    <span className="inline-flex items-center rounded-full bg-teal px-3 py-1 text-xs font-semibold text-white shadow-sm">
+      {children}
+    </span>
+  );
+}
