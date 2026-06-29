@@ -7,9 +7,9 @@ export default function SkillsPage() {
     <section className="bg-paper py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeader
-          eyebrow="Compétences"
-          title="Des blocs de compétences reliés à des usages concrets."
-          description="Frontend, backend, déploiement, design et produit travaillent ensemble pour créer des sites et applications qui tiennent debout."
+          eyebrow="Ce que je fabrique"
+          title="Des compétences reliées à des usages concrets."
+          description="Frontend, backend, automatisation, design et produit travaillent ensemble pour créer des sites, apps et outils qui tiennent debout."
         />
         <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {skillBlocks.map((block) => (

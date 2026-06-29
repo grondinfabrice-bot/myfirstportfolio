@@ -12,8 +12,8 @@ export function ProjectDetailHero({ project }: ProjectDetailHeroProps) {
     <section className="bg-paper py-14 md:py-20">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-[0.9fr_1.1fr] md:px-8">
         <div>
-          <p className="text-sm font-bold uppercase text-clay">{project.category}</p>
-          <h1 className="mt-4 text-5xl font-black leading-tight text-ink md:text-7xl">{project.title}</h1>
+          <p className="font-mono text-sm font-bold uppercase text-tomato">{project.category}</p>
+          <h1 className="mt-4 font-display text-5xl font-black leading-tight text-ink md:text-7xl">{project.title}</h1>
           <p className="mt-5 text-lg leading-8 text-graphite">{project.summary}</p>
           <div className="mt-6">
             <StatusBadge>{project.status}</StatusBadge>

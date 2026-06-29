@@ -67,7 +67,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <ProjectCaseStudySection title="Fonctionnalités">
         <ul className="grid gap-3 md:grid-cols-2">
           {project.features.map((feature) => (
-            <li key={feature} className="rounded-md bg-white p-4 font-semibold text-ink">
+            <li key={feature} className="rounded-xl bg-cream p-4 font-semibold text-ink">
               {feature}
             </li>
           ))}
@@ -93,7 +93,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <ProjectCaseStudySection title="Apprentissages">
         <ul className="space-y-3">
           {project.learnings.map((learning) => (
-            <li key={learning} className="rounded-md border border-ink/10 bg-white p-4">
+            <li key={learning} className="rounded-xl border border-fog bg-cream p-4">
               {learning}
             </li>
           ))}

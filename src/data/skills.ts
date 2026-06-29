@@ -1,13 +1,23 @@
 export const skillBlocks = [
   {
-    title: "Frontend",
+    title: "Sites & interfaces",
     description: "Interfaces modernes, responsive design, composants, animations discrètes et parcours clairs.",
     items: ["Next.js", "React", "TypeScript", "Tailwind CSS", "UX/UI", "Responsive"],
   },
   {
-    title: "Backend & données",
+    title: "Applications & données",
     description: "Logique métier, authentification, stockage média et modèles de données propres.",
     items: ["Supabase", "PostgreSQL", "Auth", "Storage", "RLS", "API"],
+  },
+  {
+    title: "Automatisations",
+    description: "Workflows, formulaires, notifications et connexions entre outils pour limiter le copier-coller.",
+    items: ["Webhooks", "API", "Cron", "Emails", "Dashboards", "No-code friendly"],
+  },
+  {
+    title: "Agents IA",
+    description: "Assistants bien cadrés, prompts structurés, règles métier et réponses utiles au contexte.",
+    items: ["Prompting", "RAG", "Agents", "OpenAI", "Garde-fous", "Docs métier"],
   },
   {
     title: "Déploiement",
@@ -33,6 +43,7 @@ export const labItems = [
   "HTTPS avec Certbot",
   "PM2 pour apps Node / Next.js",
   "Supabase PostgreSQL / Auth / Storage",
+  "Automatisations et agents IA",
   "GitHub workflow",
   "Sauvegardes serveur",
 ];

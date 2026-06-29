@@ -12,8 +12,8 @@ export default function LabPage() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeader
           eyebrow="Lab technique"
-          title="Infrastructure, déploiement et apprentissage serveur."
-          description="Cette partie montre la capacité à faire vivre un projet après la maquette : serveur, HTTPS, DNS, processus Node, GitHub et diagnostic."
+          title="Infrastructure, déploiement et outils prêts à servir."
+          description="Cette partie montre la capacité à faire vivre un projet après la maquette : serveur, HTTPS, DNS, processus Node, GitHub, diagnostic et amélioration continue."
         />
         <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {labItems.map((item) => (

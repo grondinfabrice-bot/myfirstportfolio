@@ -12,11 +12,11 @@ export default function ContactPage() {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-[0.8fr_1.2fr] md:px-8">
         <SectionHeader
           eyebrow="Contact"
-          title="Parlons de ton projet."
-          description="Le formulaire est prêt pour le MVP. Il pourra être relié plus tard à Resend ou à une Edge Function Supabase."
+          title="Discutons d'un outil à fabriquer."
+          description="Vous avez une tâche répétitive, une idée d'app ou un site à rendre plus intelligent ? On peut partir du besoin réel et en faire quelque chose de propre."
         />
         <form
-          className="rounded-lg border border-ink/10 bg-white p-6 shadow-sm"
+          className="rounded-2xl border border-fog bg-cream p-6 shadow-sm"
           onSubmit={(event) => {
             event.preventDefault();
             setSent(true);
@@ -25,12 +25,12 @@ export default function ContactPage() {
           <div className="grid gap-5">
             <label className="grid gap-2 text-sm font-bold text-ink">
               Nom
-              <input className="rounded-md border border-ink/15 px-4 py-3 font-normal outline-none focus:border-clay" name="name" required />
+              <input className="rounded-xl border border-fog bg-white px-4 py-3 font-normal outline-none focus:border-tomato" name="name" required />
             </label>
             <label className="grid gap-2 text-sm font-bold text-ink">
               Email
               <input
-                className="rounded-md border border-ink/15 px-4 py-3 font-normal outline-none focus:border-clay"
+                className="rounded-xl border border-fog bg-white px-4 py-3 font-normal outline-none focus:border-tomato"
                 name="email"
                 type="email"
                 required
@@ -38,30 +38,30 @@ export default function ContactPage() {
             </label>
             <label className="grid gap-2 text-sm font-bold text-ink">
               Type de projet
-              <select className="rounded-md border border-ink/15 px-4 py-3 font-normal outline-none focus:border-clay" name="type">
+              <select className="rounded-xl border border-fog bg-white px-4 py-3 font-normal outline-none focus:border-tomato" name="type">
                 <option>Application web</option>
                 <option>Site vitrine</option>
                 <option>Dashboard / outil métier</option>
-                <option>E-commerce</option>
-                <option>Design / direction artistique</option>
+                <option>Automatisation</option>
+                <option>Agent IA</option>
               </select>
             </label>
             <label className="grid gap-2 text-sm font-bold text-ink">
               Message
               <textarea
-                className="min-h-36 rounded-md border border-ink/15 px-4 py-3 font-normal outline-none focus:border-clay"
+                className="min-h-36 rounded-xl border border-fog bg-white px-4 py-3 font-normal outline-none focus:border-tomato"
                 name="message"
                 required
               />
             </label>
             <button
               type="submit"
-              className="inline-flex w-fit items-center gap-2 rounded-full bg-ink px-5 py-3 text-sm font-bold text-white transition hover:bg-clay"
+              className="inline-flex w-fit items-center gap-2 rounded-full bg-tomato px-5 py-3 text-sm font-bold text-white transition hover:bg-slate"
             >
               <Send className="h-4 w-4" />
               Envoyer
             </button>
-            {sent ? <p className="text-sm font-semibold text-teal">Message simulé. Connexion email à prévoir ensuite.</p> : null}
+            {sent ? <p className="text-sm font-semibold text-basil">Message simulé. Connexion email à prévoir ensuite.</p> : null}
           </div>
         </form>
       </div>

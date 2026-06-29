@@ -9,16 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#121212",
-        paper: "#f7f4ed",
-        fog: "#ece7dc",
-        moss: "#65735c",
-        clay: "#bd6f4d",
-        teal: "#0f766e",
-        graphite: "#2d2d2d",
+        ink: "#181818",
+        paper: "#FFF7E8",
+        fog: "#E8DCC8",
+        basil: "#2F7D4F",
+        tomato: "#E83F32",
+        slate: "#27384A",
+        cream: "#FFFDF7",
+        graphite: "#3B332B",
       },
       boxShadow: {
-        soft: "0 18px 60px rgba(18, 18, 18, 0.10)",
+        soft: "0 18px 60px rgba(24, 24, 24, 0.08)",
+      },
+      fontFamily: {
+        display: ["var(--font-display)", "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "SFMono-Regular", "monospace"],
       },
     },
   },

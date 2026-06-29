@@ -8,12 +8,12 @@ export default function ProjectsPage() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="grid gap-8 lg:grid-cols-[1fr_360px] lg:items-end">
           <SectionHeader
-            eyebrow="Projets"
-            title="Réalisations, concepts et lab technique."
-            description="Une sélection de plateformes, dashboards, sites de marque, idées MVP et expérimentations serveur. Chaque projet met en avant la même exigence : partir d'un besoin clair, concevoir une interface lisible et garder une base technique évolutive."
+            eyebrow="Projets mijotés"
+            title="Réalisations, concepts et outils passés par l'atelier."
+            description="Une sélection de plateformes, dashboards, sites de marque, idées MVP et expérimentations serveur. Chaque projet part d'un besoin clair, cherche une interface lisible et garde une base technique évolutive."
           />
-          <div className="rounded-lg border border-ink/10 bg-white p-5 shadow-sm">
-            <p className="text-sm font-bold uppercase text-clay">Lecture rapide</p>
+          <div className="rounded-2xl border border-fog bg-cream p-5 shadow-sm">
+            <p className="font-mono text-sm font-bold uppercase text-tomato">Lecture rapide</p>
             <p className="mt-3 text-sm leading-6 text-graphite">
               Les projets mélangent travaux en ligne, concepts produits et lab d'infrastructure. Le but est de montrer
               autant la réflexion produit que l'exécution visuelle et technique.
@@ -24,7 +24,7 @@ export default function ProjectsPage() {
           {projectCategories.map((category) => (
             <span
               key={category}
-              className="rounded-full border border-ink/10 bg-white px-4 py-2 text-sm font-bold text-ink shadow-sm"
+              className="rounded-full border border-fog bg-cream px-4 py-2 font-mono text-sm font-bold text-slate shadow-sm"
             >
               {category}
             </span>
