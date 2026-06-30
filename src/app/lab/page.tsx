@@ -138,6 +138,10 @@ export default function LabPage() {
               Ici, je documente les briques qui permettent à un projet de vivre après la maquette : serveur, domaines,
               HTTPS, déploiement, bases de données, automatisations et diagnostics.
             </p>
+            <p className="mt-4 max-w-2xl text-sm leading-6 text-graphite md:text-base">
+              Le Lab ne remplace pas les projets : il montre l'envers du décor technique, là où se jouent le
+              déploiement, les domaines, le HTTPS, les bases de données et la stabilité.
+            </p>
             <p className="mt-4 max-w-xl text-sm font-bold leading-6 text-slate md:text-base">
               Un beau site, c'est bien. Un site qui reste en ligne, sécurisé et maintenable, c'est mieux.
             </p>

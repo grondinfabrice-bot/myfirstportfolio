@@ -42,6 +42,12 @@ const processSteps = [
   },
 ];
 
+const labelClass = "grid min-w-0 gap-2 text-sm font-bold text-ink";
+const fieldClass =
+  "min-h-12 w-full min-w-0 rounded-xl border border-fog bg-white px-4 py-3 text-base font-normal leading-6 text-ink outline-none transition placeholder:text-graphite/45 focus:border-tomato md:text-sm";
+const selectClass =
+  "min-h-12 w-full min-w-0 rounded-xl border border-fog bg-white px-4 py-3 text-base font-normal leading-6 text-ink outline-none transition focus:border-tomato md:text-sm";
+
 export default function ContactPage() {
   const [sent, setSent] = useState(false);
 
@@ -120,21 +126,21 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="mt-6 grid gap-5">
+            <div className="mt-6 grid gap-6">
               <div className="grid gap-5 sm:grid-cols-2">
-                <label className="grid gap-2 text-sm font-bold text-ink">
+                <label className={labelClass}>
                   Nom
                   <input
-                    className="rounded-xl border border-fog bg-white px-4 py-3 font-normal text-ink outline-none transition placeholder:text-graphite/45 focus:border-tomato"
+                    className={fieldClass}
                     name="name"
                     placeholder="Votre nom"
                     required
                   />
                 </label>
-                <label className="grid gap-2 text-sm font-bold text-ink">
+                <label className={labelClass}>
                   Email
                   <input
-                    className="rounded-xl border border-fog bg-white px-4 py-3 font-normal text-ink outline-none transition placeholder:text-graphite/45 focus:border-tomato"
+                    className={fieldClass}
                     name="email"
                     placeholder="vous@email.com"
                     type="email"
@@ -143,9 +149,9 @@ export default function ContactPage() {
                 </label>
               </div>
 
-              <label className="grid gap-2 text-sm font-bold text-ink">
+              <label className={labelClass}>
                 Type de projet
-                <select className="rounded-xl border border-fog bg-white px-4 py-3 font-normal text-ink outline-none transition focus:border-tomato" name="type">
+                <select className={selectClass} name="type">
                   <option>Application web</option>
                   <option>Site vitrine</option>
                   <option>Dashboard / outil métier</option>
@@ -154,38 +160,32 @@ export default function ContactPage() {
                 </select>
               </label>
 
-              <div className="grid gap-5 sm:grid-cols-3">
-                <label className="grid gap-2 text-sm font-bold text-ink sm:col-span-1">
+              <div className="grid min-w-0 gap-5 min-[1400px]:grid-cols-3 min-[1400px]:gap-6">
+                <label className={labelClass}>
                   État du projet
-                  <select className="rounded-xl border border-fog bg-white px-4 py-3 font-normal text-ink outline-none transition focus:border-tomato" name="status">
+                  <select className={selectClass} name="status">
                     <option>Idée</option>
                     <option>Déjà en ligne</option>
                     <option>À améliorer</option>
                     <option>À automatiser</option>
                   </select>
                 </label>
-                <label className="grid gap-2 text-sm font-bold text-ink">
-                  Budget optionnel
-                  <input
-                    className="rounded-xl border border-fog bg-white px-4 py-3 font-normal text-ink outline-none transition placeholder:text-graphite/45 focus:border-tomato"
-                    name="budget"
-                    placeholder="Ex : 800-1500 EUR"
-                  />
-                </label>
-                <label className="grid gap-2 text-sm font-bold text-ink">
-                  Échéance optionnelle
-                  <input
-                    className="rounded-xl border border-fog bg-white px-4 py-3 font-normal text-ink outline-none transition placeholder:text-graphite/45 focus:border-tomato"
-                    name="deadline"
-                    placeholder="Ex : ce mois-ci"
-                  />
-                </label>
+                <div className="grid min-w-0 gap-5 md:grid-cols-2 min-[1400px]:col-span-2 min-[1400px]:gap-6">
+                  <label className={labelClass}>
+                    Budget optionnel
+                    <input className={fieldClass} name="budget" placeholder="Ex : 800-1500 EUR" />
+                  </label>
+                  <label className={labelClass}>
+                    Échéance optionnelle
+                    <input className={fieldClass} name="deadline" placeholder="Ex : ce mois-ci" />
+                  </label>
+                </div>
               </div>
 
-              <label className="grid gap-2 text-sm font-bold text-ink">
+              <label className={`${labelClass} pt-1`}>
                 Message
                 <textarea
-                  className="min-h-44 rounded-xl border border-fog bg-white px-4 py-3 font-normal leading-7 text-ink outline-none transition placeholder:text-graphite/45 focus:border-tomato"
+                  className="min-h-44 w-full min-w-0 rounded-xl border border-fog bg-white px-4 py-3 text-base font-normal leading-7 text-ink outline-none transition placeholder:text-graphite/45 focus:border-tomato md:text-sm"
                   name="message"
                   placeholder="Décrivez rapidement le contexte : ce que vous voulez créer, améliorer ou automatiser. Même si ce n'est pas encore clair, envoyez les grandes lignes."
                   required
