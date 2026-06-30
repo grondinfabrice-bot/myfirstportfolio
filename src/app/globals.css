@@ -52,3 +52,41 @@ body {
     @apply mt-8 md:mt-10;
   }
 }
+
+@keyframes competence-workflow-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.competence-workflow-card {
+  animation: competence-workflow-in 1100ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes competence-node-breathe {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(232, 63, 50, 0.18);
+  }
+
+  50% {
+    box-shadow: 0 0 0 7px rgba(232, 63, 50, 0);
+  }
+}
+
+.competence-workflow-node {
+  animation: competence-node-breathe 2.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .competence-workflow-card,
+  .competence-workflow-node {
+    animation: none;
+  }
+}
