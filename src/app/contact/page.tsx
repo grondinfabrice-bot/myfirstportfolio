@@ -3,26 +3,26 @@
 import { useState } from "react";
 import { CheckCircle2, Clock3, FileText, Gauge, Send, Sparkles } from "lucide-react";
 
-const starterPrompts = [
+const startingSituations = [
   {
-    title: "Le contexte",
-    description: "Votre activité, votre public, ce qui existe déjà et ce qui vous bloque aujourd'hui.",
+    title: "J'ai une idée pas encore cadrée",
+    description: "On clarifie le besoin, les priorités et la première version qui mérite d'être tentée.",
   },
   {
-    title: "Le résultat attendu",
-    description: "Ce que la personne doit comprendre, faire, réserver, acheter, suivre ou recevoir.",
+    title: "J'ai quelque chose à améliorer",
+    description: "On regarde la structure, les contenus, l'expérience mobile ou ce qui manque de lisibilité.",
   },
   {
-    title: "Les exemples utiles",
-    description: "Un lien, une capture, un document, un tableau ou un outil que vous utilisez déjà.",
+    title: "J'ai besoin d'un outil interne",
+    description: "On transforme un suivi manuel, un tableau ou une routine en parcours plus pratique.",
   },
   {
-    title: "Les contraintes",
-    description: "Budget, délai, contenu disponible, accès techniques, priorité ou niveau d'urgence.",
+    title: "J'ai une tâche répétitive",
+    description: "On identifie ce qui peut être simplifié sans créer une mécanique lourde.",
   },
   {
-    title: "Les zones floues",
-    description: "Ce que vous ne savez pas encore décider. C'est souvent là que le cadrage devient utile.",
+    title: "J'ai un blocage technique",
+    description: "On remet à plat un souci de domaine, formulaire, données ou mise en ligne.",
   },
 ];
 
@@ -30,15 +30,15 @@ const processSteps = [
   {
     title: "Vous expliquez le besoin",
     description:
-      "Même brouillon, même incomplet : une idée, un problème ou une tâche répétitive suffit pour commencer.",
+      "Même brouillon : un contexte, un lien, un problème ou une envie d'amélioration suffit.",
   },
   {
-    title: "Je clarifie le parcours",
-    description: "Objectif, utilisateurs, priorités, contenus disponibles, points flous et pièges à éviter.",
+    title: "Je trie avec vous",
+    description: "On repère ce qui compte maintenant, ce qui est réaliste, et ce qui peut attendre.",
   },
   {
-    title: "On fabrique une première version propre",
-    description: "Une base claire, utile, responsive et évolutive, sans usine à gaz.",
+    title: "On choisit une première étape",
+    description: "Le but n'est pas de tout construire d'un coup, mais de poser une suite concrète.",
   },
 ];
 
@@ -58,11 +58,11 @@ export default function ContactPage() {
           <div className="max-w-3xl">
             <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato md:text-sm">Contact</p>
             <h1 className="mt-3 font-display text-[2.45rem] font-black leading-[1.02] text-ink md:text-[3.35rem]">
-              Envoyez-moi le début du problème, pas un cahier des charges parfait.
+              Démarrons avec ce que vous avez.
             </h1>
             <p className="mt-5 text-base leading-7 text-graphite md:text-[1.0625rem]">
-              Quelques lignes suffisent pour lancer une vraie discussion : le contexte, ce que vous voulez obtenir, ce
-              qui bloque et les ressources déjà disponibles.
+              Pas besoin d'arriver avec un cahier des charges parfait. Une idée, une difficulté, un lien ou quelques
+              lignes de contexte suffisent pour lancer la discussion.
             </p>
           </div>
 
@@ -73,15 +73,15 @@ export default function ContactPage() {
               </div>
               <div>
                 <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato">
-                  Ce que vous pouvez m'envoyer
+                  Situations de départ
                 </p>
                 <h2 className="mt-1 font-display text-2xl font-black leading-tight text-ink">
-                  De la matière simple pour commencer proprement.
+                  Vous pouvez écrire même si ce n'est pas encore bien rangé.
                 </h2>
               </div>
             </div>
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
-              {starterPrompts.map((type) => (
+              {startingSituations.map((type) => (
                 <article key={type.title} className="rounded-xl border border-fog bg-paper/80 p-4">
                   <h3 className="font-display text-lg font-black leading-tight text-ink">{type.title}</h3>
                   <p className="mt-2 text-sm leading-6 text-graphite">{type.description}</p>
@@ -120,9 +120,9 @@ export default function ContactPage() {
           >
             <div className="border-b border-fog pb-5">
               <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato">Message projet</p>
-              <h2 className="mt-2 font-display text-3xl font-black leading-tight text-ink">Posez les premières pièces.</h2>
+              <h2 className="mt-2 font-display text-3xl font-black leading-tight text-ink">Racontez le point de départ.</h2>
               <p className="mt-3 text-sm leading-6 text-graphite">
-                Plus le message est concret, même imparfait, plus je peux vous répondre utilement.
+                Plus le contexte est direct, plus je peux vous répondre précisément.
               </p>
             </div>
 
@@ -155,7 +155,8 @@ export default function ContactPage() {
                   <option>J'ai une idée à cadrer</option>
                   <option>J'ai déjà quelque chose en ligne</option>
                   <option>J'ai un fonctionnement à simplifier</option>
-                  <option>J'ai des contenus ou données à organiser</option>
+                  <option>J'ai un outil interne à imaginer</option>
+                  <option>J'ai un problème technique à comprendre</option>
                   <option>Je ne sais pas encore quoi demander</option>
                 </select>
               </label>
@@ -167,7 +168,7 @@ export default function ContactPage() {
                     <option>Idée</option>
                     <option>Déjà en ligne</option>
                     <option>À améliorer</option>
-                    <option>Processus interne à clarifier</option>
+                    <option>Processus interne à simplifier</option>
                   </select>
                 </label>
                 <div className="grid min-w-0 gap-5 md:grid-cols-2 min-[1400px]:col-span-2 min-[1400px]:gap-6">
@@ -209,7 +210,7 @@ export default function ContactPage() {
               </div>
 
               <p className="text-sm leading-6 text-graphite">
-                Pas besoin de tout ranger avant d'écrire. Envoyez la matière disponible, je vous aiderai à mettre de l'ordre.
+                Envoyez ce que vous avez : une idée, une difficulté, une capture, un lien ou une routine qui vous prend trop de temps.
               </p>
             </div>
           </form>
@@ -217,11 +218,11 @@ export default function ContactPage() {
           <div className="grid gap-3 px-2 py-4 text-sm text-graphite sm:grid-cols-3">
             <p className="inline-flex items-center gap-2">
               <Clock3 className="h-4 w-4 text-tomato" aria-hidden="true" />
-              Cadrage clair
+              Tri des priorités
             </p>
             <p className="inline-flex items-center gap-2">
               <Gauge className="h-4 w-4 text-basil" aria-hidden="true" />
-              Base évolutive
+              Première étape
             </p>
             <p className="inline-flex items-center gap-2">
               <FileText className="h-4 w-4 text-slate" aria-hidden="true" />

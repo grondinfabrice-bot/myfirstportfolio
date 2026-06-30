@@ -21,33 +21,33 @@ import { getProjectBySlug } from "@/data/projects";
 
 const clientBenefits = [
   {
-    title: "Mise en ligne propre",
-    description: "Un projet accessible sur son domaine, avec une configuration serveur lisible et des redirections propres.",
+    title: "Publication maîtrisée",
+    description: "Un projet qui sort du local, répond sur son domaine et garde une configuration lisible.",
     icon: Globe2,
   },
   {
     title: "Sécurité de base",
-    description: "HTTPS, certificats, configuration serveur et bonnes pratiques pour éviter les fondations bancales.",
+    description: "Certificats HTTPS, redirections et vérifications simples pour éviter les bases fragiles.",
     icon: ShieldCheck,
   },
   {
     title: "Stabilité",
-    description: "Applications suivies en production, redémarrage maîtrisé et diagnostic possible quand quelque chose bloque.",
+    description: "Process applicatif suivi, relance maîtrisée et diagnostic possible quand quelque chose bloque.",
     icon: MonitorCheck,
   },
   {
     title: "Données structurées",
-    description: "Supabase, PostgreSQL, Auth et Storage configurés pour que les données restent exploitables et contrôlées.",
+    description: "Base, accès et stockage pensés pour rester exploitables après la mise en ligne.",
     icon: Database,
   },
   {
     title: "Maintenance",
-    description: "Logs, sauvegardes, commandes utiles et méthode pour comprendre ce qui bloque.",
+    description: "Logs, sauvegardes et gestes de contrôle pour comprendre plus vite ce qui coince.",
     icon: Wrench,
   },
   {
     title: "Évolutivité",
-    description: "Une base technique organisée pour corriger, déplacer ou faire évoluer un projet sans repartir de zéro.",
+    description: "Une base technique assez lisible pour corriger ou faire évoluer sans repartir de zéro.",
     icon: RefreshCw,
   },
 ];
@@ -55,52 +55,52 @@ const clientBenefits = [
 const timelineSteps = [
   {
     step: "01",
-    title: "Préparer la version",
-    description: "Build, variables, dépendances et vérifications avant la mise en ligne.",
+    title: "Code local",
+    description: "Build, dépendances, variables et vérifications avant sortie.",
     icon: HardDrive,
   },
   {
     step: "02",
-    title: "Versionner avec GitHub",
-    description: "Historique clair, sauvegarde du code, corrections traçables.",
+    title: "Dépôt GitHub",
+    description: "Historique lisible, sauvegarde du code, corrections traçables.",
     icon: GitBranch,
   },
   {
     step: "03",
-    title: "Déployer sur VPS",
-    description: "Serveur Ubuntu, Nginx, PM2 et configuration multi-sites.",
+    title: "Serveur / hébergement",
+    description: "VPS Ubuntu, Nginx, dossiers de site et process applicatif.",
     icon: ServerCog,
   },
   {
     step: "04",
-    title: "Brancher le domaine",
-    description: "DNS, redirections www/non-www, HTTPS avec Certbot.",
+    title: "Domaine + HTTPS",
+    description: "DNS, redirections, certificat Certbot et contrôle navigateur.",
     icon: Globe2,
   },
   {
     step: "05",
-    title: "Surveiller et améliorer",
-    description: "Logs, erreurs, sauvegardes, corrections et évolutions.",
+    title: "Vérifier / maintenir",
+    description: "Logs, erreurs, sauvegardes, relances et corrections.",
     icon: MonitorCheck,
   },
 ];
 
 const realSituations = [
   {
-    title: "Un domaine ne pointe pas au bon endroit",
-    description: "Diagnostic DNS, vérification des enregistrements A/CNAME, test avec dig, correction Nginx.",
+    title: "Configurer un domaine",
+    description: "Vérifier les enregistrements, les redirections et la configuration Nginx.",
   },
   {
-    title: "Une app Next.js doit rester en ligne",
-    description: "Lancement avec PM2, sauvegarde du process, redémarrage automatique après reboot.",
+    title: "Relancer une application",
+    description: "Contrôler PM2, relancer correctement et garder le process disponible après reboot.",
   },
   {
-    title: "Plusieurs sites sur un même VPS",
-    description: "Organisation des dossiers, configuration Nginx multi-sites, logs séparés, certificats HTTPS.",
+    title: "Comprendre pourquoi un site ne répond pas",
+    description: "Lire les logs, tester Nginx, vérifier le build et isoler l'erreur.",
   },
   {
-    title: "Une base Supabase doit rester propre",
-    description: "Tables, contraintes, relations, vues, Auth, Storage et règles d'accès.",
+    title: "Connecter une base de données",
+    description: "Contrôler Supabase, Auth, Storage, variables et règles d'accès.",
   },
 ];
 
@@ -140,14 +140,14 @@ export default function LabPage() {
               Lab technique
             </p>
             <h1 className="mt-3 font-display text-[2.25rem] font-black leading-[1.04] text-ink md:text-[3.1rem] lg:text-6xl">
-              Infrastructure, maintenance et mise en ligne.
+              Ce qui permet aux projets de tenir en ligne.
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-graphite md:text-[1.0625rem]">
-              Cette page rassemble ce qui permet aux projets de tenir techniquement en ligne : VPS, Nginx, DNS, HTTPS,
-              PM2, GitHub, Supabase, logs, sauvegardes et maintenance.
+              Un projet web ne s'arrête pas à une belle interface. Il doit aussi sortir du local, répondre sur son
+              domaine, rester surveillable et pouvoir être corrigé quand quelque chose coince.
             </p>
             <p className="mt-4 max-w-xl text-sm font-bold leading-6 text-slate md:text-base">
-              La conception vit dans la Fabrique. Ici, on parle exploitation, stabilité et diagnostic.
+              Ici : VPS, Nginx, DNS, HTTPS, PM2, GitHub, Supabase, logs et sauvegardes.
             </p>
           </div>
 
@@ -175,8 +175,8 @@ export default function LabPage() {
         <section className="section-stack lab-reveal" style={{ animationDelay: "180ms" }}>
           <SectionHeader
             eyebrow="Bénéfices client"
-            title="Ce que ça change quand l'infrastructure est propre."
-            description="Le Lab traduit les sujets serveur en résultats concrets : un site accessible, des erreurs plus faciles à comprendre et une maintenance moins fragile."
+            title="Ce que ça apporte au projet."
+            description="Moins de blocage au moment de publier, une base plus simple à maintenir et des problèmes plus faciles à diagnostiquer."
             tone="balanced"
           />
           <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -203,12 +203,12 @@ export default function LabPage() {
         <section className="section-stack lab-reveal" style={{ animationDelay: "260ms" }}>
           <SectionHeader
             eyebrow="Du local au site en ligne"
-            title="Une chaîne de mise en ligne lisible."
-            description="Le Lab suit la partie exploitation : préparer une version, versionner, déployer, brancher le domaine, puis surveiller."
+            title="Le chemin technique reste lisible."
+            description="Du code local au domaine public : dépôt, serveur, Nginx, HTTPS, process applicatif, puis vérifications."
             tone="balanced"
           />
-          <div className="relative mt-8 grid gap-5 md:grid-cols-5">
-            <div className="absolute left-8 top-8 hidden h-px w-[calc(100%-4rem)] bg-tomato/25 md:block" />
+          <div className="relative mt-8 grid gap-5 lg:grid-cols-5">
+            <div className="absolute left-8 top-8 hidden h-px w-[calc(100%-4rem)] bg-tomato/25 lg:block" />
             {timelineSteps.map((item, index) => {
               const Icon = item.icon;
 
@@ -217,7 +217,7 @@ export default function LabPage() {
                   key={item.step}
                   className="relative rounded-2xl border border-fog bg-cream p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-basil/30 hover:shadow-soft"
                 >
-                  <div className="absolute -left-3 top-8 h-[calc(100%+1.25rem)] w-px bg-tomato/25 md:hidden" aria-hidden="true" />
+                  <div className="absolute -left-3 top-8 h-[calc(100%+1.25rem)] w-px bg-tomato/25 lg:hidden" aria-hidden="true" />
                   <div className="relative z-10 flex items-center gap-3 md:block">
                     <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-tomato/25 bg-paper text-tomato shadow-sm">
                       <Icon className="h-5 w-5" />
@@ -229,7 +229,7 @@ export default function LabPage() {
                   </div>
                   <p className="mt-4 text-sm leading-6 text-graphite">{item.description}</p>
                   {index < timelineSteps.length - 1 ? (
-                    <ArrowRight className="absolute -right-3 top-10 hidden h-5 w-5 text-tomato md:block" />
+                    <ArrowRight className="absolute -right-3 top-10 hidden h-5 w-5 text-tomato lg:block" />
                   ) : null}
                 </article>
               );
@@ -241,8 +241,8 @@ export default function LabPage() {
           <div className="lab-reveal" style={{ animationDelay: "320ms" }}>
             <SectionHeader
               eyebrow="Situations réelles"
-              title="Les incidents que le Lab doit aider à résoudre."
-              description="Cette page sert de repère quand un domaine, une application, une base de données ou un processus serveur ne se comporte pas comme prévu."
+              title="Situations que je veux savoir diagnostiquer."
+              description="Des cas simples, mais décisifs : publier, relancer, lire une erreur, brancher une base ou comprendre pourquoi un site ne répond pas."
               tone="balanced"
             />
             <div className="mt-8 grid gap-4 md:grid-cols-2">
@@ -274,8 +274,8 @@ export default function LabPage() {
                 </span>
               </div>
               <p className="mt-5 text-sm leading-6 text-graphite">
-                Environnement VPS pour héberger plusieurs sites, isoler les configurations, gérer les domaines,
-                sécuriser les accès HTTPS et maintenir les processus applicatifs.
+                Environnement VPS pour héberger plusieurs sites, isoler les configurations, gérer les domaines, activer
+                HTTPS et maintenir les processus applicatifs.
               </p>
               <Link
                 href={labProject.detailUrl ?? `/projets/${labProject.slug}`}
@@ -291,8 +291,8 @@ export default function LabPage() {
         <section className="section-stack lab-reveal" style={{ animationDelay: "440ms" }}>
           <SectionHeader
             eyebrow="Stack actuelle"
-            title="La pile infrastructure et maintenance."
-            description="Les briques que j'utilise pour publier, router, sécuriser, connecter les données, lire les logs et maintenir les projets."
+            title="Les briques que j'utilise aujourd'hui."
+            description="Une liste courte des outils qui reviennent dans la mise en ligne, la donnée et la maintenance de base."
             tone="balanced"
           />
           <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -320,8 +320,8 @@ export default function LabPage() {
                 Vous avez un projet à héberger ou stabiliser ?
               </h2>
               <p className="mt-4 text-base leading-7 text-graphite">
-                Le Lab couvre la partie qui arrive après la conception : domaine, hébergement, certificats, processus,
-                logs, sauvegardes et corrections de mise en ligne.
+                Je peux aider à passer du projet local à une version accessible : domaine, hébergement, certificats,
+                process, logs, sauvegardes et corrections de mise en ligne.
               </p>
             </div>
             <Link

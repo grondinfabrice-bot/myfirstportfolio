@@ -1,45 +1,44 @@
 import Link from "next/link";
 import { SectionHeader } from "@/components/SectionHeader";
-import { skillBlocks } from "@/data/skills";
 import { ArrowRight, Bot, Brush, Database, Lightbulb, Rocket, Workflow } from "lucide-react";
 
 const stepStyles = {
-  Produit: {
+  "Produit & cadrage": {
     accent: "bg-[#E7A13A]",
     border: "border-[#E7A13A]/35",
     glow: "shadow-[0_18px_48px_rgba(231,161,58,0.12)]",
     soft: "bg-[#E7A13A]/10 text-[#8A520C]",
     icon: Lightbulb,
   },
-  Design: {
+  "Design & interface": {
     accent: "bg-[#B85BA7]",
     border: "border-[#B85BA7]/35",
     glow: "shadow-[0_18px_48px_rgba(184,91,167,0.12)]",
     soft: "bg-[#B85BA7]/10 text-[#76336B]",
     icon: Brush,
   },
-  "Sites & interfaces": {
+  "Construction web": {
     accent: "bg-[#3A78C2]",
     border: "border-[#3A78C2]/35",
     glow: "shadow-[0_18px_48px_rgba(58,120,194,0.12)]",
     soft: "bg-[#3A78C2]/10 text-[#254F83]",
     icon: Workflow,
   },
-  "Applications & données": {
+  "Données & logique métier": {
     accent: "bg-basil",
     border: "border-basil/35",
     glow: "shadow-[0_18px_48px_rgba(47,125,79,0.13)]",
     soft: "bg-basil/10 text-basil",
     icon: Database,
   },
-  "Automatisations & IA": {
+  "Automatisations & IA cadrée": {
     accent: "bg-[#19A7B8]",
     border: "border-[#19A7B8]/35",
     glow: "shadow-[0_18px_48px_rgba(25,167,184,0.12)]",
     soft: "bg-[#19A7B8]/10 text-[#14717C]",
     icon: Bot,
   },
-  "Passage au réel": {
+  "Préparation à la mise en ligne": {
     accent: "bg-slate",
     border: "border-slate/30",
     glow: "shadow-[0_18px_48px_rgba(39,56,74,0.12)]",
@@ -48,60 +47,74 @@ const stepStyles = {
   },
 };
 
-const stepOrder = [
-  "Produit",
-  "Design",
-  "Sites & interfaces",
-  "Applications & données",
-  "Automatisations & IA",
-  "Passage au réel",
-] as const;
+const workflowSteps = [
+  {
+    title: "Produit & cadrage",
+    description:
+      "Je clarifie le besoin, l'usage réel, les publics et les priorités pour transformer une demande ouverte en plan d'action.",
+    items: ["Cadrage", "Usage réel", "Priorités", "MVP", "Parcours", "Décisions"],
+  },
+  {
+    title: "Design & interface",
+    description:
+      "Je pose une direction visuelle, j'organise les écrans et je travaille la lisibilité pour rendre l'expérience simple côté utilisateur.",
+    items: ["Direction visuelle", "UI", "Lisibilité", "Responsive", "Typographie", "États"],
+  },
+  {
+    title: "Construction web",
+    description:
+      "Je construis une interface utilisable, pas une maquette figée : composants cohérents, structure lisible et base facile à faire évoluer.",
+    items: ["Next.js", "React", "TypeScript", "Tailwind", "Composants", "Structure"],
+  },
+  {
+    title: "Données & logique métier",
+    description:
+      "Je relie les écrans aux informations utiles : utilisateurs, contenus, statuts, commandes, tableaux, règles simples et parcours métier.",
+    items: ["Modèle de données", "Utilisateurs", "Statuts", "Contenus", "Tableaux", "Règles"],
+  },
+  {
+    title: "Automatisations & IA cadrée",
+    description:
+      "Je cherche les tâches répétitives à alléger, les outils à connecter et les usages IA à cadrer avec des règles et garde-fous simples.",
+    items: ["Scénarios", "Webhooks", "Emails", "OpenAI", "Prompts", "Garde-fous"],
+  },
+  {
+    title: "Préparation à la mise en ligne",
+    description:
+      "Je prépare une base prête à sortir du local : configuration lisible, variables séparées, vérifications et passage possible vers domaine ou serveur.",
+    items: ["Recette", "Variables", "Build", "GitHub", "Checklist", "Passage en ligne"],
+  },
+];
 
-const blockByTitle = new Map(skillBlocks.map((block) => [block.title, block]));
-
-const workflowSteps = stepOrder.map((title) => {
-  if (title === "Automatisations & IA") {
-    const automation = blockByTitle.get("Automatisations");
-    const agents = blockByTitle.get("Agents IA");
-
-    return {
-      title,
-      description: `${automation?.description ?? ""} ${agents?.description ?? ""}`.trim(),
-      items: [...(automation?.items ?? []), ...(agents?.items ?? [])].slice(0, 8),
-    };
-  }
-
-  return blockByTitle.get(title)!;
-});
-
-const toolkitItems = [
-  "Cadrage",
-  "Parcours utilisateur",
-  "UX/UI",
-  "UI design",
-  "Responsive",
-  "Design system léger",
-  "Branding",
-  "Typographie",
-  "Graphisme",
-  "Covers",
-  "MVP",
-  "Priorisation",
-  "Architecture produit",
-  "Dashboard",
-  "Scénarios",
-  "Aide cadrée",
-  "Prompts utiles",
-  "Docs métier",
-  "No-code friendly",
-  "Tests terrain",
-  "Next.js",
-  "React",
-  "TypeScript",
-  "Tailwind CSS",
-  "Supabase",
-  "API",
-  "OpenAI",
+const toolkitFamilies = [
+  {
+    title: "Produit",
+    items: ["Cadrage", "Priorisation", "Parcours utilisateur", "MVP"],
+  },
+  {
+    title: "Interface",
+    items: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Responsive"],
+  },
+  {
+    title: "Design",
+    items: ["Direction artistique", "UI", "Typographie", "Identité visuelle", "Figma"],
+  },
+  {
+    title: "Données",
+    items: ["Supabase", "PostgreSQL", "Auth", "Storage", "RLS"],
+  },
+  {
+    title: "Automatisation",
+    items: ["Make", "Airtable", "Webhooks", "Emails", "Dashboards"],
+  },
+  {
+    title: "IA",
+    items: ["Prompting", "Agents cadrés", "OpenAI", "Recherche documentaire", "Garde-fous"],
+  },
+  {
+    title: "Mise en ligne",
+    items: ["GitHub", "Variables d'environnement", "Build", "Domaine", "Checklist"],
+  },
 ];
 
 const desktopOrder = ["lg:order-1", "lg:order-2", "lg:order-3", "lg:order-6", "lg:order-5", "lg:order-4"];
@@ -111,9 +124,9 @@ export default function SkillsPage() {
     <section className="page-breath bg-paper">
       <div className="site-container">
         <SectionHeader
-          eyebrow="Ce que je fabrique"
-          title="Des compétences reliées à des usages concrets."
-          description="Ici, on parle de conception : comprendre le besoin, dessiner le parcours, organiser les données, choisir les bons écrans et cadrer les automatisations ou l'IA."
+          eyebrow="Fabrique"
+          title="Comment le travail est construit."
+          description="Cette page montre ma méthode de conception et de construction : cadrer, dessiner, structurer, automatiser quand cela sert le projet, puis préparer une base prête à sortir du local."
           tone="balanced"
         />
 
@@ -225,21 +238,29 @@ export default function SkillsPage() {
             <div>
               <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato">Boîte à outils</p>
               <h2 className="mt-2 font-display text-2xl font-black leading-tight text-ink">
-                Les briques que je combine selon le besoin réel.
+                Des familles de briques, pas une liste pour impressionner.
               </h2>
             </div>
             <p className="max-w-xl text-sm leading-6 text-graphite">
-              Pas une collection pour décorer : chaque brique sert à formuler une décision, rendre un écran plus clair ou simplifier une étape.
+              Les outils changent selon le projet. Ce qui compte, c'est de savoir quelle famille sert le besoin :
+              produit, interface, design, données, automatisation, IA ou passage en ligne.
             </p>
           </div>
-          <div className="mt-5 flex flex-wrap gap-2">
-            {toolkitItems.map((item) => (
-              <span
-                key={item}
-                className="rounded-full border border-fog bg-paper/80 px-3 py-1.5 font-mono text-xs font-semibold text-slate"
-              >
-                {item}
-              </span>
+          <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {toolkitFamilies.map((family) => (
+              <article key={family.title} className="rounded-xl border border-fog bg-paper/80 p-4">
+                <h3 className="font-display text-lg font-black leading-tight text-ink">{family.title}</h3>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {family.items.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full border border-fog bg-cream px-2.5 py-1 font-mono text-[0.68rem] font-semibold leading-none text-slate"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </article>
             ))}
           </div>
         </div>
@@ -249,8 +270,8 @@ export default function SkillsPage() {
             <div className="max-w-2xl">
               <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato">Détails techniques</p>
               <p className="mt-2 text-sm leading-6 text-graphite">
-                La Fabrique reste côté conception et construction du produit. Pour l'hébergement, le serveur, les
-                domaines, les certificats, les processus et la maintenance, le détail est rangé côté Lab.
+                Ici, je garde la mise en ligne au niveau méthode. Les détails serveur, DNS, HTTPS, processus,
+                logs et maintenance sont volontairement rangés dans le Lab.
               </p>
             </div>
             <Link

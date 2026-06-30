@@ -7,9 +7,10 @@ import { TechBadge } from "./TechBadge";
 
 type ProjectCardProps = {
   project: Project;
+  showProof?: boolean;
 };
 
-export function ProjectCard({ project }: ProjectCardProps) {
+export function ProjectCard({ project, showProof = false }: ProjectCardProps) {
   const detailUrl = project.detailUrl;
 
   return (
@@ -44,16 +45,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
             </h3>
           )}
           <p className="mt-3 min-h-[3rem] text-sm leading-6 text-graphite">{project.summary}</p>
-          <div className="mt-4 rounded-xl border border-fog bg-paper/75 p-4">
-            <p className="font-mono text-[0.68rem] font-bold uppercase tracking-[0.08em] text-slate">
-              Usage
-            </p>
-            <p className="mt-2 text-sm leading-6 text-graphite">{project.usage}</p>
-            <p className="mt-4 font-mono text-[0.68rem] font-bold uppercase tracking-[0.08em] text-tomato">
-              Ce projet démontre
-            </p>
-            <p className="mt-2 text-sm leading-6 text-slate">{project.demonstrates}</p>
-          </div>
+          {showProof ? (
+            <div className="mt-4 rounded-xl border border-fog bg-paper/75 p-4">
+              <p className="font-mono text-[0.68rem] font-bold uppercase tracking-[0.08em] text-tomato">
+                Ce que ça démontre
+              </p>
+              <p className="mt-2 text-sm leading-6 text-slate">{project.demonstrates}</p>
+            </div>
+          ) : null}
         </div>
         <div className="mt-5 flex flex-wrap gap-2">
           {project.stack.slice(0, 4).map((tech) => (

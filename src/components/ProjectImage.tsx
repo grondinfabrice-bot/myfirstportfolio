@@ -49,16 +49,16 @@ function PlaceholderContent({ title, category }: { title: string; category?: str
       <div className="absolute inset-0 bg-[linear-gradient(135deg,#27384A_0%,#1F2935_48%,#181818_100%)]" />
       <div className="absolute inset-0 opacity-[0.12] [background-image:linear-gradient(rgba(255,255,255,0.7)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.7)_1px,transparent_1px)] [background-size:30px_30px]" />
       <div className="absolute inset-x-0 top-0 h-1 bg-[linear-gradient(90deg,#E83F32_0%,#E83F32_38%,#2F7D4F_38%,#2F7D4F_62%,rgba(255,255,255,0.22)_62%)]" />
-      <div className="absolute left-5 right-5 top-5 flex items-center justify-between gap-3">
-        <div className="flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-xs font-bold text-white/80 backdrop-blur">
-          <Layers3 className="h-3.5 w-3.5 text-tomato" />
-          {category ?? "Projet web"}
+      <div className="absolute left-5 right-5 top-5 flex min-w-0 items-center justify-between gap-3">
+        <div className="flex min-w-0 items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-xs font-bold text-white/80 backdrop-blur">
+          <Layers3 className="h-3.5 w-3.5 shrink-0 text-tomato" />
+          <span className="truncate">{category ?? "Projet web"}</span>
         </div>
-        <div className="rounded-full border border-white/15 bg-white/10 p-2 text-white/70 backdrop-blur">
+        <div className="shrink-0 rounded-full border border-white/15 bg-white/10 p-2 text-white/70 backdrop-blur">
           <ImageIcon className="h-4 w-4" />
         </div>
       </div>
-      <div className="absolute bottom-5 left-5 right-5 grid gap-4 sm:grid-cols-[1fr_150px] sm:items-end">
+      <div className="absolute bottom-5 left-5 right-5 grid min-w-0 gap-4 min-[1600px]:grid-cols-[1fr_150px] min-[1600px]:items-end">
         <div>
           <div className="mb-4 flex gap-2" aria-hidden="true">
             <span className="h-2 w-12 rounded-full bg-tomato" />
@@ -70,7 +70,7 @@ function PlaceholderContent({ title, category }: { title: string; category?: str
             Aperçu projet
           </p>
         </div>
-        <div className="hidden rounded-md border border-white/15 bg-white/10 p-4 text-white shadow-sm backdrop-blur sm:block">
+        <div className="hidden rounded-md border border-white/15 bg-white/10 p-4 text-white shadow-sm backdrop-blur min-[1600px]:block">
           <MonitorSmartphone className="mb-5 h-7 w-7 text-tomato" aria-hidden="true" />
           <div className="space-y-2">
             <div className="h-2.5 rounded-full bg-white/75" />

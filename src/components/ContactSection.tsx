@@ -8,11 +8,11 @@ export function ContactSection() {
         <div>
           <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato md:text-sm">Contact</p>
           <h2 className="mt-3 font-display text-[2rem] font-black leading-[1.08] md:text-[2.65rem] lg:text-5xl">
-            Vous avez une idée encore floue ou un besoin qui tourne en rond ?
+            Vous avez un point de départ, même incomplet ?
           </h2>
           <p className="mt-5 text-base leading-7 text-white/70">
-            Envoyez le contexte, les contraintes et ce que vous aimeriez obtenir. Je vous aide à transformer ça en
-            prochaine étape claire.
+            Envoyez ce que vous avez : un contexte, un lien, une difficulté ou une envie d'amélioration. On commence par
+            clarifier la prochaine étape.
           </p>
           <Link
             href="/contact"
@@ -24,7 +24,7 @@ export function ContactSection() {
         </div>
         <div className="rounded-2xl border border-white/10 bg-white/6 p-6">
           <div className="grid gap-4 md:grid-cols-2">
-            {["Contexte", "Objectif", "Public", "Exemples", "Contraintes", "Zones floues"].map(
+            {["Idée", "Blocage", "Lien", "Capture", "Routine", "Question"].map(
               (item) => (
                 <div key={item} className="rounded-xl bg-white/8 p-4 text-sm font-semibold">
                   {item}

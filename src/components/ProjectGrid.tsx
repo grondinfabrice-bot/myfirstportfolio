@@ -6,9 +6,10 @@ import { ProjectCard } from "./ProjectCard";
 type ProjectGridProps = {
   projects: Project[];
   showLabGateway?: boolean;
+  showProof?: boolean;
 };
 
-export function ProjectGrid({ projects, showLabGateway = false }: ProjectGridProps) {
+export function ProjectGrid({ projects, showLabGateway = false, showProof = false }: ProjectGridProps) {
   const visibleProjects = showLabGateway
     ? projects.filter((project) => project.slug !== "lab-vps-infrastructure")
     : projects;
@@ -16,7 +17,7 @@ export function ProjectGrid({ projects, showLabGateway = false }: ProjectGridPro
   return (
     <div className="grid gap-6 md:grid-cols-2 md:items-stretch xl:grid-cols-3">
       {visibleProjects.map((project) => (
-        <ProjectCard key={project.slug} project={project} />
+        <ProjectCard key={project.slug} project={project} showProof={showProof} />
       ))}
       {showLabGateway ? <LabGatewayCard /> : null}
     </div>
@@ -38,7 +39,7 @@ function LabGatewayCard() {
         </div>
         <div className="relative mt-10 flex items-end justify-between gap-4">
           <div>
-            <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-cream/50">Coulisses</p>
+            <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-cream/50">Infrastructure</p>
             <h3 className="mt-2 font-display text-[1.8rem] font-black leading-[1.02] text-cream">
               La preuve technique est rangée au Lab
             </h3>

@@ -4,7 +4,7 @@ export type ProjectStatus =
   | "Démo en ligne / évolution e-commerce"
   | "Concept"
   | "Site vitrine / futur e-commerce"
-  | "Version 1 propre/pro"
+  | "Version 1 pro"
   | "Idée / concept"
   | "Réalisé / apprentissage continu";
 
@@ -56,7 +56,7 @@ export const projects: Project[] = [
     status: "MVP en ligne",
     summary: "Réseau local pour connecter les créateurs de La Réunion.",
     usage: "Présenter son profil, publier et créer des connexions locales.",
-    demonstrates: "Produit communautaire, profils, publications, médias et base Supabase reliée à une interface sociale.",
+    demonstrates: "MVP social, profils, publications, authentification et données structurées.",
     description:
       "Plateforme sociale locale permettant aux créateurs de publier, présenter leur profil et interagir autour de projets créatifs.",
     problem:
@@ -99,10 +99,10 @@ export const projects: Project[] = [
     slug: "champion-wkn",
     title: "Champion WKN",
     category: "Site vitrine / marque",
-    status: "Version 1 propre/pro",
+    status: "Version 1 pro",
     summary: "Site vitrine one-page premium pour un champion du monde WKN de Muay Thai.",
     usage: "Présenter un parcours sportif et ouvrir la porte aux partenaires.",
-    demonstrates: "Direction artistique sportive, storytelling premium, sections de preuve et responsive mobile propre.",
+    demonstrates: "Identité forte, storytelling sportif, responsive design et crédibilité visuelle.",
     description:
       "Landing page officielle sombre, brute et premium pensée pour présenter un champion du monde WKN de Muay Thai, valoriser son titre, son parcours, son partenariat principal avec Terre Sauvage et ouvrir la porte à de nouveaux partenaires, médias et organisateurs.",
     problem:
@@ -126,7 +126,7 @@ export const projects: Project[] = [
     learnings: [
       "Construire une vitrine sportive premium sans tomber dans un rendu corporate, amateur ou trop chargé.",
       "Garder une direction artistique sombre, dorée et spectaculaire tout en conservant une interface lisible sur mobile.",
-      "Les images actuelles sont des placeholders : les vraies photos, dates, combats, chiffres et contenus officiels seront intégrés dans une prochaine version.",
+      "Les visuels actuels servent de support de présentation : les photos, dates, combats, chiffres et contenus officiels pourront enrichir une prochaine version.",
     ],
     images: ["/images/projects/optimized/champion-wkn.webp"],
     detailUrl: "/projets/champion-wkn",
@@ -138,7 +138,7 @@ export const projects: Project[] = [
     status: "Concept / module en cours",
     summary: "Dashboard de gestion pour suivre ventes, marges, objectifs et produits.",
     usage: "Piloter une activité avec moins de tableaux dispersés.",
-    demonstrates: "Traduction d'un besoin métier en indicateurs, alertes, logique de marge et structure de données.",
+    demonstrates: "Dashboard métier, ventes, marges, objectifs, produits et logique de gestion interne.",
     description:
       "Outil de gestion destiné à compléter Passkomand avec suivi de chiffre d'affaires, marges, stocks, dates de péremption et rappels de commande.",
     problem:
@@ -171,7 +171,7 @@ export const projects: Project[] = [
     status: "Démo en ligne / évolution e-commerce",
     summary: "Boutique d'instrumentales Boom Bap avec licences numériques.",
     usage: "Présenter, vendre et préparer la livraison de fichiers audio.",
-    demonstrates: "Univers de marque musical, logique catalogue, licences numériques et préparation au paiement.",
+    demonstrates: "Beat store, univers Boom Bap, licences, vente digitale et identité artistique.",
     description:
       "Site de vente d'instrumentales hip-hop Boom Bap inspirées des années 90, avec logique de licences, présentation audio et future intégration paiement.",
     problem:
@@ -203,7 +203,7 @@ export const projects: Project[] = [
     status: "Concept",
     summary: "Application mobile pour comparer deux produits par scan de code-barres.",
     usage: "Comparer vite deux produits techniques en situation d'achat.",
-    demonstrates: "Cadrage MVP, parcours de comparaison rapide, scan produit et aide à la décision en magasin.",
+    demonstrates: "Usage mobile, scan code-barres, comparaison rapide et logique produit.",
     description:
       "Application pensée pour les vendeurs et clients en multimédia / électroménager afin de comparer rapidement deux produits techniquement.",
     problem:
@@ -233,7 +233,7 @@ export const projects: Project[] = [
     status: "Site vitrine / futur e-commerce",
     summary: "Site de marque textile outdoor / streetwear.",
     usage: "Installer un univers de marque avant l'ouverture boutique.",
-    demonstrates: "Identité visuelle, storytelling de marque, présentation produit et base prête pour l'e-commerce.",
+    demonstrates: "Direction artistique, univers outdoor / streetwear et base prête pour l'e-commerce.",
     description:
       "Site visuel pour une marque de vêtements inspirée par la nature, l'île et une esthétique brute/premium.",
     problem:
@@ -258,7 +258,7 @@ export const projects: Project[] = [
     status: "Idée / concept",
     summary: "Application de réservation de créneaux pour studio d'enregistrement.",
     usage: "Réserver des créneaux sans passer par des messages dispersés.",
-    demonstrates: "Parcours de réservation, disponibilité, gestion admin et notifications autour d'un usage simple.",
+    demonstrates: "Planning, réservation simple, service local et outil métier ciblé.",
     description: "Outil permettant à des artistes de réserver des créneaux studio simplement.",
     problem:
       "La réservation de créneaux studio peut vite devenir chaotique lorsqu'elle passe par messages, appels et notes séparées.",

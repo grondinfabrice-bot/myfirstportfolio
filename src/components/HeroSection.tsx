@@ -8,17 +8,17 @@ export function HeroSection() {
       <div className="site-container grid gap-10 pt-9 pb-14 md:min-h-[calc(100svh-69px)] md:grid-cols-[1.08fr_0.92fr] md:items-center md:gap-12 md:pt-16 md:pb-22 lg:gap-16 lg:pt-20 lg:pb-24">
         <div className="relative max-w-3xl">
           <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato md:text-sm">
-            Atelier web pour transformer les idées floues en outils clairs
+            Atelier web pour passer de l'idée au premier usage
           </p>
           <h1 className="mt-5 max-w-4xl font-display text-[3.35rem] font-black leading-[0.94] text-ink sm:text-6xl md:text-7xl lg:text-[5.35rem]">
             Fabrik Automates
           </h1>
           <p className="mt-5 max-w-2xl font-display text-2xl font-extrabold leading-[1.08] text-slate sm:text-3xl md:text-[2.45rem]">
-            Des outils web utiles, lisibles et prêts à évoluer.
+            Transformer un besoin en interface testable.
           </p>
           <p className="mt-6 max-w-[38rem] text-base leading-7 text-graphite sm:text-lg sm:leading-8">
-            Je vous aide à passer d'un besoin encore brouillon à une première version propre : le bon parcours, les
-            bonnes priorités, puis une construction solide.
+            Je conçois des expériences web qui partent d'un contexte réel : comprendre, prioriser, fabriquer une base
+            utilisable, puis l'améliorer.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <Link
@@ -45,14 +45,14 @@ export function HeroSection() {
                   <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato">
                     Atelier de fabrication
                   </p>
-                  <p className="mt-1 font-display text-xl font-black leading-tight">Cadrage + Design + Code</p>
+                  <p className="mt-1 font-display text-xl font-black leading-tight">Cadrage + Usage + Version 1</p>
                 </div>
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/8 text-tomato">
                   <Sparkles className="h-5 w-5" />
                 </div>
               </div>
               <div className="mt-5 grid gap-3">
-                {["Clarifier le besoin", "Dessiner le parcours", "Livrer une base fiable"].map((item) => (
+                {["Comprendre le contexte", "Choisir la bonne première étape", "Tester sans tout figer"].map((item) => (
                   <div key={item} className="rounded-lg border border-white/10 bg-white/8 p-4">
                     <p className="text-sm font-semibold">{item}</p>
                   </div>
@@ -62,15 +62,15 @@ export function HeroSection() {
             <div className="mt-4 grid grid-cols-2 gap-4">
               <div className="rounded-xl border border-fog bg-paper p-4">
                 <p className="font-display text-3xl font-black text-ink">5</p>
-                <p className="text-sm text-graphite">formats fabriqués</p>
+                <p className="text-sm text-graphite">portes d'entrée</p>
               </div>
               <div className="rounded-xl bg-basil p-4 text-white shadow-sm">
                 <Server className="mb-3 h-5 w-5" />
-                <p className="text-sm font-semibold">Moins de dispersion, plus de décisions utiles.</p>
+                <p className="text-sm font-semibold">Un site pour vérifier, pas une brochure qui explique tout.</p>
               </div>
               <div className="col-span-2 rounded-xl border border-fog bg-paper p-4 text-slate">
                 <Bot className="mb-3 h-5 w-5 text-tomato" />
-                <p className="text-sm font-semibold">Une promesse simple : comprendre vite, construire juste.</p>
+                <p className="text-sm font-semibold">Projets, méthode, solidité technique, puis discussion.</p>
               </div>
             </div>
           </div>

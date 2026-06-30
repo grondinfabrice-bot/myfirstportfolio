@@ -12,7 +12,7 @@ export default function ProjectsPage() {
           <SectionHeader
             eyebrow="Projets mijotés"
             title="Réalisations, concepts et outils passés par l'atelier."
-            description="Une sélection de réalisations et de concepts pour juger sur pièces : objectifs, interfaces, choix produit, fonctionnalités et apprentissages."
+            description="Une sélection courte pour voir ce qui a été fabriqué ou imaginé : usage, direction visuelle, logique produit et preuves concrètes."
             tone="balanced"
           />
           <div className="rounded-2xl border border-fog bg-cream p-5 shadow-sm">
@@ -20,7 +20,7 @@ export default function ProjectsPage() {
               Lecture rapide
             </p>
             <p className="mt-3 text-sm leading-6 text-graphite">
-              Chaque carte donne un aperçu concret du besoin traité, du rôle tenu et de la forme livrée ou explorée.
+              Chaque carte indique pourquoi le projet est dans le portfolio : ce qu'il raconte, l'usage visé et ce qu'il démontre.
             </p>
           </div>
         </div>
@@ -35,7 +35,7 @@ export default function ProjectsPage() {
           ))}
         </div>
         <div className="section-stack">
-          <ProjectGrid projects={projects} showLabGateway />
+          <ProjectGrid projects={projects} showLabGateway showProof />
         </div>
       </div>
     </section>

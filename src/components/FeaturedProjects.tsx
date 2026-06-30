@@ -11,8 +11,8 @@ export function FeaturedProjects() {
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <SectionHeader
             eyebrow="Projets mijotés"
-            title="Des outils concrets, pensés côté usage et côté technique."
-            description="Plateforme communautaire, dashboard métier, boutique digitale : chaque projet montre une manière de transformer un besoin en interface claire."
+            title="Quelques preuves avant d'aller plus loin."
+            description="Un aperçu court de projets visibles ou explorés. La page Projets détaille ce que chacun démontre."
             tone="balanced"
           />
           <Link href="/projets" className="inline-flex items-center gap-2 font-bold text-ink hover:text-tomato">
