@@ -1,6 +1,33 @@
 import Link from "next/link";
 import { Mail } from "lucide-react";
 
+const contactStarters = [
+  {
+    title: "Idée",
+    description: "Même encore floue.",
+  },
+  {
+    title: "Blocage",
+    description: "Technique, visuel ou organisationnel.",
+  },
+  {
+    title: "Lien",
+    description: "Site, outil, maquette ou exemple.",
+  },
+  {
+    title: "Capture",
+    description: "Pour montrer ce qui coince.",
+  },
+  {
+    title: "Routine",
+    description: "Une tâche à simplifier.",
+  },
+  {
+    title: "Question",
+    description: "Pour cadrer avant de construire.",
+  },
+];
+
 export function ContactSection() {
   return (
     <section className="section-breath bg-slate text-white">
@@ -11,8 +38,8 @@ export function ContactSection() {
             Vous avez un point de départ, même incomplet ?
           </h2>
           <p className="mt-5 text-base leading-7 text-white/70">
-            Envoyez ce que vous avez : un contexte, un lien, une difficulté ou une envie d'amélioration. On commence par
-            clarifier la prochaine étape.
+            Envoyez ce que vous avez : une idée, un lien, une capture, une difficulté ou une envie d'amélioration. On
+            clarifie ensuite ce qui est utile, réaliste et prioritaire.
           </p>
           <Link
             href="/contact"
@@ -23,14 +50,16 @@ export function ContactSection() {
           </Link>
         </div>
         <div className="rounded-2xl border border-white/10 bg-white/6 p-6">
-          <div className="grid gap-4 md:grid-cols-2">
-            {["Idée", "Blocage", "Lien", "Capture", "Routine", "Question"].map(
-              (item) => (
-                <div key={item} className="rounded-xl bg-white/8 p-4 text-sm font-semibold">
-                  {item}
-                </div>
-              ),
-            )}
+          <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato md:text-sm">
+            Ce que vous pouvez m'envoyer
+          </p>
+          <div className="mt-5 grid gap-3 sm:grid-cols-2">
+            {contactStarters.map((item) => (
+              <div key={item.title} className="rounded-xl border border-white/10 bg-white/8 p-4">
+                <p className="font-display text-lg font-black leading-tight text-white">{item.title}</p>
+                <p className="mt-1 text-sm leading-6 text-white/65">{item.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
