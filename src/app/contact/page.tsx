@@ -1,28 +1,28 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle2, Clock3, Gauge, LayoutTemplate, Send, Sparkles } from "lucide-react";
+import { CheckCircle2, Clock3, FileText, Gauge, Send, Sparkles } from "lucide-react";
 
-const projectTypes = [
+const starterPrompts = [
   {
-    title: "Site vitrine",
-    description: "Présence claire, responsive, prête à évoluer.",
+    title: "Le contexte",
+    description: "Votre activité, votre public, ce qui existe déjà et ce qui vous bloque aujourd'hui.",
   },
   {
-    title: "Application web",
-    description: "Comptes, données, parcours métier.",
+    title: "Le résultat attendu",
+    description: "Ce que la personne doit comprendre, faire, réserver, acheter, suivre ou recevoir.",
   },
   {
-    title: "Dashboard",
-    description: "Ventes, marges, objectifs, suivi interne.",
+    title: "Les exemples utiles",
+    description: "Un lien, une capture, un document, un tableau ou un outil que vous utilisez déjà.",
   },
   {
-    title: "Automatisation",
-    description: "Moins de copier-coller, plus de cerveau disponible.",
+    title: "Les contraintes",
+    description: "Budget, délai, contenu disponible, accès techniques, priorité ou niveau d'urgence.",
   },
   {
-    title: "Agent IA",
-    description: "Assistant cadré, relié à des contenus utiles.",
+    title: "Les zones floues",
+    description: "Ce que vous ne savez pas encore décider. C'est souvent là que le cadrage devient utile.",
   },
 ];
 
@@ -34,7 +34,7 @@ const processSteps = [
   },
   {
     title: "Je clarifie le parcours",
-    description: "Objectif, utilisateurs, priorités, données, automatisations possibles et pièges à éviter.",
+    description: "Objectif, utilisateurs, priorités, contenus disponibles, points flous et pièges à éviter.",
   },
   {
     title: "On fabrique une première version propre",
@@ -58,11 +58,11 @@ export default function ContactPage() {
           <div className="max-w-3xl">
             <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato md:text-sm">Contact</p>
             <h1 className="mt-3 font-display text-[2.45rem] font-black leading-[1.02] text-ink md:text-[3.35rem]">
-              Parlons de l'outil que vous voulez fabriquer.
+              Envoyez-moi le début du problème, pas un cahier des charges parfait.
             </h1>
             <p className="mt-5 text-base leading-7 text-graphite md:text-[1.0625rem]">
-              Une idée d'app, un site à améliorer, un dashboard à créer ou une tâche répétitive à automatiser ?
-              Envoyez-moi le contexte. Je vous aiderai à clarifier ce qui est utile, réaliste et prioritaire.
+              Quelques lignes suffisent pour lancer une vraie discussion : le contexte, ce que vous voulez obtenir, ce
+              qui bloque et les ressources déjà disponibles.
             </p>
           </div>
 
@@ -73,15 +73,15 @@ export default function ContactPage() {
               </div>
               <div>
                 <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato">
-                  Ce qu'on peut démarrer ensemble
+                  Ce que vous pouvez m'envoyer
                 </p>
                 <h2 className="mt-1 font-display text-2xl font-black leading-tight text-ink">
-                  Des projets concrets, cadrés dès le départ.
+                  De la matière simple pour commencer proprement.
                 </h2>
               </div>
             </div>
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
-              {projectTypes.map((type) => (
+              {starterPrompts.map((type) => (
                 <article key={type.title} className="rounded-xl border border-fog bg-paper/80 p-4">
                   <h3 className="font-display text-lg font-black leading-tight text-ink">{type.title}</h3>
                   <p className="mt-2 text-sm leading-6 text-graphite">{type.description}</p>
@@ -120,9 +120,9 @@ export default function ContactPage() {
           >
             <div className="border-b border-fog pb-5">
               <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato">Message projet</p>
-              <h2 className="mt-2 font-display text-3xl font-black leading-tight text-ink">Expliquez-moi le contexte.</h2>
+              <h2 className="mt-2 font-display text-3xl font-black leading-tight text-ink">Posez les premières pièces.</h2>
               <p className="mt-3 text-sm leading-6 text-graphite">
-                Pas besoin d'avoir tout cadré : le formulaire sert à ouvrir la discussion proprement.
+                Plus le message est concret, même imparfait, plus je peux vous répondre utilement.
               </p>
             </div>
 
@@ -150,13 +150,13 @@ export default function ContactPage() {
               </div>
 
               <label className={labelClass}>
-                Type de projet
+                Point de départ
                 <select className={selectClass} name="type">
-                  <option>Application web</option>
-                  <option>Site vitrine</option>
-                  <option>Dashboard / outil métier</option>
-                  <option>Automatisation</option>
-                  <option>Agent IA</option>
+                  <option>J'ai une idée à cadrer</option>
+                  <option>J'ai déjà quelque chose en ligne</option>
+                  <option>J'ai un fonctionnement à simplifier</option>
+                  <option>J'ai des contenus ou données à organiser</option>
+                  <option>Je ne sais pas encore quoi demander</option>
                 </select>
               </label>
 
@@ -167,7 +167,7 @@ export default function ContactPage() {
                     <option>Idée</option>
                     <option>Déjà en ligne</option>
                     <option>À améliorer</option>
-                    <option>À automatiser</option>
+                    <option>Processus interne à clarifier</option>
                   </select>
                 </label>
                 <div className="grid min-w-0 gap-5 md:grid-cols-2 min-[1400px]:col-span-2 min-[1400px]:gap-6">
@@ -187,7 +187,7 @@ export default function ContactPage() {
                 <textarea
                   className="min-h-44 w-full min-w-0 rounded-xl border border-fog bg-white px-4 py-3 text-base font-normal leading-7 text-ink outline-none transition placeholder:text-graphite/45 focus:border-tomato md:text-sm"
                   name="message"
-                  placeholder="Décrivez rapidement le contexte : ce que vous voulez créer, améliorer ou automatiser. Même si ce n'est pas encore clair, envoyez les grandes lignes."
+                  placeholder="Décrivez le contexte, le résultat souhaité, ce qui bloque, les liens ou documents utiles, et ce que vous ne savez pas encore trancher."
                   required
                 />
               </label>
@@ -209,7 +209,7 @@ export default function ContactPage() {
               </div>
 
               <p className="text-sm leading-6 text-graphite">
-                Pas besoin d'un cahier des charges complet. Quelques lignes bien senties suffisent pour lancer la discussion.
+                Pas besoin de tout ranger avant d'écrire. Envoyez la matière disponible, je vous aiderai à mettre de l'ordre.
               </p>
             </div>
           </form>
@@ -224,8 +224,8 @@ export default function ContactPage() {
               Base évolutive
             </p>
             <p className="inline-flex items-center gap-2">
-              <LayoutTemplate className="h-4 w-4 text-slate" aria-hidden="true" />
-              Interface propre
+              <FileText className="h-4 w-4 text-slate" aria-hidden="true" />
+              Réponse concrète
             </p>
           </div>
         </div>

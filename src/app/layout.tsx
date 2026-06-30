@@ -27,9 +27,9 @@ const jetBrainsMono = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fabrikautomates.tech"),
-  title: "Fabrik Automates — Sites, apps & automatisations",
+  title: "Fabrik Automates — Atelier web utile",
   description:
-    "Une fabrique de sites, d'apps et d'automatisations utiles pour créateurs, indépendants et petites entreprises.",
+    "Un atelier web pour clarifier les besoins, concevoir des parcours lisibles et construire des outils utiles.",
   icons: {
     icon: [
       { url: "/brand/fabrik-automates-icon-64.png", sizes: "64x64", type: "image/png" },
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Fabrik Automates",
-    description: "Sites, apps & automatisations bien mijotés.",
+    description: "Des outils web utiles, lisibles et prêts à évoluer.",
     images: [{ url: "/brand/fabrik-automates-og.png", width: 1200, height: 675 }],
   },
 };

@@ -4,32 +4,39 @@ import { HeroSection } from "@/components/HeroSection";
 import { LabCard } from "@/components/LabCard";
 import { SectionHeader } from "@/components/SectionHeader";
 import { SkillBlock } from "@/components/SkillBlock";
-import { labItems, skillBlocks } from "@/data/skills";
+import { skillBlocks } from "@/data/skills";
 
 const creationTypes = [
   {
-    title: "Sites web",
-    description: "Présences en ligne claires, rapides, responsive et prêtes à évoluer.",
+    title: "Présence claire",
+    description: "Une base lisible pour présenter une activité, une offre ou un univers sans perdre le visiteur.",
   },
   {
-    title: "Applications web",
-    description: "Comptes utilisateurs, données, logique métier, médias et parcours robustes.",
+    title: "Parcours métier",
+    description: "Des écrans pensés pour réserver, suivre, comparer, publier, vendre ou piloter une activité.",
   },
   {
-    title: "Dashboards métiers",
-    description: "Suivi de ventes, marges, produits, objectifs et indicateurs utiles au quotidien.",
+    title: "Décision rapide",
+    description: "Des informations triées pour voir ce qui compte, repérer les blocages et agir plus vite.",
   },
   {
-    title: "Automatisations",
-    description: "Workflows propres pour réduire les tâches répétitives et sécuriser les étapes clés.",
+    title: "Tâches allégées",
+    description: "Des étapes répétitives simplifiées quand elles prennent trop de temps ou créent des oublis.",
   },
   {
-    title: "Agents IA",
-    description: "Assistants cadrés, reliés à vos contenus et conçus pour des usages précis.",
+    title: "Assistance cadrée",
+    description: "Des aides précises, reliées au contexte réel, avec des limites claires et un usage identifié.",
   },
 ];
 
-const homeLabItems = labItems.slice(0, 6);
+const homeLabItems = [
+  "Mise en ligne",
+  "Domaines et redirections",
+  "Serveur multi-sites",
+  "Processus applicatifs",
+  "Données et accès",
+  "Logs et maintenance",
+];
 
 export default function Home() {
   return (
@@ -41,8 +48,8 @@ export default function Home() {
         <div className="site-container">
           <SectionHeader
             eyebrow="Ce que je fabrique"
-            title="Des sites, apps et automatisations qui servent le quotidien."
-            description="Le design sert la compréhension, la technique sert l'usage, et chaque décision doit aider le projet à avancer sans bruit."
+            title="Des formats différents, une même obsession : rendre l'usage évident."
+            description="L'accueil sert à vous orienter vite : comprendre ce que l'atelier peut prendre en charge, puis aller vers les preuves, la méthode ou le contact."
             tone="balanced"
           />
           <div className="section-stack grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -60,8 +67,8 @@ export default function Home() {
         <div className="site-container">
           <SectionHeader
             eyebrow="Fabrique"
-            title="Une approche hybride : design, produit, code et automatisation."
-            description="Je mélange culture visuelle, logique métier, données et déploiement pour fabriquer des outils utiles, pas seulement de beaux écrans."
+            title="Une approche hybride : produit, image, parcours et construction."
+            description="Je pars du besoin réel, je cherche la forme juste, puis je construis une base exploitable sans multiplier les couches inutiles."
             tone="balanced"
           />
           <div className="section-stack grid gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -76,12 +83,12 @@ export default function Home() {
         <div className="site-container">
           <SectionHeader
             eyebrow="Ma recette de fabrication"
-            title="Comprendre, dessiner, construire, automatiser, améliorer."
-            description="Je clarifie l'objectif, je priorise le parcours, je conçois l'interface, puis je relie le front, les données, les automatisations et le déploiement."
+            title="Comprendre, dessiner, construire, tester, améliorer."
+            description="Je clarifie l'objectif, je priorise le parcours, je conçois l'interface, puis je transforme les choix en version utilisable."
             tone="balanced"
           />
           <div className="section-stack grid gap-5 md:grid-cols-5">
-            {["Comprendre", "Dessiner", "Construire", "Automatiser", "Améliorer"].map((step, index) => (
+            {["Comprendre", "Dessiner", "Construire", "Tester", "Améliorer"].map((step, index) => (
               <div key={step} className="rounded-2xl bg-slate p-6 text-white">
                 <p className="font-mono text-sm font-bold text-tomato">0{index + 1}</p>
                 <h3 className="mt-4 font-display text-2xl font-black">{step}</h3>
@@ -96,15 +103,15 @@ export default function Home() {
           <SectionHeader
             eyebrow="Lab technique"
             title="Un atelier qui assume aussi l'infrastructure."
-            description="Le lab montre la capacité à livrer et maintenir : hébergement, domaines, HTTPS, processus Node, workflow GitHub et diagnostic."
+            description="Le Lab regroupe les coulisses techniques : mise en ligne, domaines, serveur, diagnostic et maintenance. L'accueil n'en donne qu'un aperçu."
             tone="balanced"
           />
           <div className="section-stack grid gap-6 lg:grid-cols-[320px_1fr]">
             <div className="rounded-2xl bg-slate p-6 text-white shadow-soft">
-              <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato md:text-sm">VPS réel</p>
-              <p className="mt-4 font-display text-3xl font-black leading-tight">Du repo GitHub jusqu'au serveur.</p>
+              <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato md:text-sm">Coulisses réelles</p>
+              <p className="mt-4 font-display text-3xl font-black leading-tight">Ce qui permet au projet de tenir en ligne.</p>
               <p className="mt-4 text-sm leading-6 text-white/70">
-                Cette partie montre la capacité à livrer et maintenir des projets web, pas seulement à les maquettiser.
+                Cette partie reste volontairement courte ici : le détail technique vit dans le Lab.
               </p>
             </div>
             <div className="grid gap-4 md:grid-cols-2">
@@ -124,8 +131,8 @@ export default function Home() {
               Un regard visuel, une logique produit, une envie de fabriquer utile.
             </h2>
             <p className="mt-5 text-base leading-7 text-graphite md:text-[1.0625rem]">
-              Basé à La Réunion, je développe des sites, applications web, dashboards et automatisations. Mon approche
-              mélange direction artistique, logique métier, données, IA cadrée et déploiement.
+              Basé à La Réunion, je viens de l'image, de la musique et du multimédia. Aujourd'hui, je mets cette culture
+              de fabrication au service d'outils web concrets, avec une attention particulière au contexte humain.
             </p>
           </div>
         </div>

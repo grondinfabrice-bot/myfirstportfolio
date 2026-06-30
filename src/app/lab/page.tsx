@@ -22,7 +22,7 @@ import { getProjectBySlug } from "@/data/projects";
 const clientBenefits = [
   {
     title: "Mise en ligne propre",
-    description: "Un projet accessible avec un vrai domaine, une configuration claire et des redirections propres.",
+    description: "Un projet accessible sur son domaine, avec une configuration serveur lisible et des redirections propres.",
     icon: Globe2,
   },
   {
@@ -32,12 +32,12 @@ const clientBenefits = [
   },
   {
     title: "Stabilité",
-    description: "Apps Node/Next.js suivies avec PM2, redémarrage maîtrisé et diagnostic possible.",
+    description: "Applications suivies en production, redémarrage maîtrisé et diagnostic possible quand quelque chose bloque.",
     icon: MonitorCheck,
   },
   {
     title: "Données structurées",
-    description: "Supabase, PostgreSQL, Auth et Storage pour construire des projets plus utiles qu'une simple vitrine.",
+    description: "Supabase, PostgreSQL, Auth et Storage configurés pour que les données restent exploitables et contrôlées.",
     icon: Database,
   },
   {
@@ -47,7 +47,7 @@ const clientBenefits = [
   },
   {
     title: "Évolutivité",
-    description: "Une base organisée pour ajouter progressivement des fonctionnalités sans tout casser.",
+    description: "Une base technique organisée pour corriger, déplacer ou faire évoluer un projet sans repartir de zéro.",
     icon: RefreshCw,
   },
 ];
@@ -55,8 +55,8 @@ const clientBenefits = [
 const timelineSteps = [
   {
     step: "01",
-    title: "Construire en local",
-    description: "Pages, composants, données de test, ajustements UI.",
+    title: "Préparer la version",
+    description: "Build, variables, dépendances et vérifications avant la mise en ligne.",
     icon: HardDrive,
   },
   {
@@ -140,18 +140,14 @@ export default function LabPage() {
               Lab technique
             </p>
             <h1 className="mt-3 font-display text-[2.25rem] font-black leading-[1.04] text-ink md:text-[3.1rem] lg:text-6xl">
-              Le Lab, c'est l'arrière-cuisine technique.
+              Infrastructure, maintenance et mise en ligne.
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-graphite md:text-[1.0625rem]">
-              Ici, je documente les briques qui permettent à un projet de vivre après la maquette : serveur, domaines,
-              HTTPS, déploiement, bases de données, automatisations et diagnostics.
-            </p>
-            <p className="mt-4 max-w-2xl text-sm leading-6 text-graphite md:text-base">
-              Le Lab ne remplace pas les projets : il montre l'envers du décor technique, là où se jouent le
-              déploiement, les domaines, le HTTPS, les bases de données et la stabilité.
+              Cette page rassemble ce qui permet aux projets de tenir techniquement en ligne : VPS, Nginx, DNS, HTTPS,
+              PM2, GitHub, Supabase, logs, sauvegardes et maintenance.
             </p>
             <p className="mt-4 max-w-xl text-sm font-bold leading-6 text-slate md:text-base">
-              Un beau site, c'est bien. Un site qui reste en ligne, sécurisé et maintenable, c'est mieux.
+              La conception vit dans la Fabrique. Ici, on parle exploitation, stabilité et diagnostic.
             </p>
           </div>
 
@@ -179,8 +175,8 @@ export default function LabPage() {
         <section className="section-stack lab-reveal" style={{ animationDelay: "180ms" }}>
           <SectionHeader
             eyebrow="Bénéfices client"
-            title="Ce que ça change quand la technique est propre."
-            description="Le Lab traduit les sujets serveur en résultats concrets : moins de bricolage invisible, plus de stabilité et une base prête à évoluer."
+            title="Ce que ça change quand l'infrastructure est propre."
+            description="Le Lab traduit les sujets serveur en résultats concrets : un site accessible, des erreurs plus faciles à comprendre et une maintenance moins fragile."
             tone="balanced"
           />
           <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
@@ -207,8 +203,8 @@ export default function LabPage() {
         <section className="section-stack lab-reveal" style={{ animationDelay: "260ms" }}>
           <SectionHeader
             eyebrow="Du local au site en ligne"
-            title="Un parcours clair, pas une boîte noire."
-            description="Chaque projet suit une chaîne de fabrication lisible : construire, versionner, déployer, brancher le domaine, puis surveiller."
+            title="Une chaîne de mise en ligne lisible."
+            description="Le Lab suit la partie exploitation : préparer une version, versionner, déployer, brancher le domaine, puis surveiller."
             tone="balanced"
           />
           <div className="relative mt-8 grid gap-5 md:grid-cols-5">
@@ -245,8 +241,8 @@ export default function LabPage() {
           <div className="lab-reveal" style={{ animationDelay: "320ms" }}>
             <SectionHeader
               eyebrow="Situations réelles"
-              title="Des problèmes concrets, pas seulement des mots techniques."
-              description="Le Lab sert aussi à garder une méthode de diagnostic quand un domaine, une app ou une base de données ne se comporte pas comme prévu."
+              title="Les incidents que le Lab doit aider à résoudre."
+              description="Cette page sert de repère quand un domaine, une application, une base de données ou un processus serveur ne se comporte pas comme prévu."
               tone="balanced"
             />
             <div className="mt-8 grid gap-4 md:grid-cols-2">
@@ -278,8 +274,8 @@ export default function LabPage() {
                 </span>
               </div>
               <p className="mt-5 text-sm leading-6 text-graphite">
-                Mise en place d'un environnement VPS complet pour héberger plusieurs sites, gérer les domaines,
-                sécuriser les accès HTTPS et maintenir des apps Node/Next.js en ligne.
+                Environnement VPS pour héberger plusieurs sites, isoler les configurations, gérer les domaines,
+                sécuriser les accès HTTPS et maintenir les processus applicatifs.
               </p>
               <Link
                 href={labProject.detailUrl ?? `/projets/${labProject.slug}`}
@@ -295,8 +291,8 @@ export default function LabPage() {
         <section className="section-stack lab-reveal" style={{ animationDelay: "440ms" }}>
           <SectionHeader
             eyebrow="Stack actuelle"
-            title="Les fondations techniques qui gardent les projets en ligne."
-            description="Une stack pragmatique pour publier, sécuriser, connecter les données, surveiller et maintenir les projets."
+            title="La pile infrastructure et maintenance."
+            description="Les briques que j'utilise pour publier, router, sécuriser, connecter les données, lire les logs et maintenir les projets."
             tone="balanced"
           />
           <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -319,13 +315,13 @@ export default function LabPage() {
         <section className="section-stack lab-reveal rounded-2xl border border-fog bg-cream p-6 shadow-sm md:p-8 lg:p-10" style={{ animationDelay: "520ms" }}>
           <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-center">
             <div className="max-w-2xl">
-              <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato md:text-sm">Mise en ligne</p>
+              <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato md:text-sm">Infrastructure</p>
               <h2 className="mt-3 font-display text-3xl font-black leading-tight text-ink md:text-4xl">
-                Vous avez un projet à mettre en ligne proprement ?
+                Vous avez un projet à héberger ou stabiliser ?
               </h2>
               <p className="mt-4 text-base leading-7 text-graphite">
-                Je peux vous aider à clarifier la partie visible, mais aussi les fondations techniques : domaine,
-                hébergement, données, automatisations et maintenance.
+                Le Lab couvre la partie qui arrive après la conception : domaine, hébergement, certificats, processus,
+                logs, sauvegardes et corrections de mise en ligne.
               </p>
             </div>
             <Link

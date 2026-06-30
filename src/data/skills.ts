@@ -1,28 +1,28 @@
 export const skillBlocks = [
   {
     title: "Sites & interfaces",
-    description: "Interfaces modernes, responsive design, composants, animations discrètes et parcours clairs.",
-    items: ["Next.js", "React", "TypeScript", "Tailwind CSS", "UX/UI", "Responsive"],
+    description: "Écrans lisibles, hiérarchie claire, composants cohérents et parcours faciles à suivre.",
+    items: ["Hiérarchie", "Composants", "Responsive", "Accessibilité", "États UI", "Lisibilité"],
   },
   {
     title: "Applications & données",
-    description: "Logique métier, authentification, stockage média et modèles de données propres.",
-    items: ["Supabase", "Modèle de données", "Auth produit", "Médias", "Parcours métier", "API"],
+    description: "Organisation des informations, règles métier et écrans pensés pour un usage quotidien.",
+    items: ["Modèle de données", "Règles métier", "Médias", "Parcours métier", "Tableaux", "API"],
   },
   {
     title: "Automatisations",
-    description: "Workflows, formulaires, notifications et connexions entre outils pour limiter le copier-coller.",
-    items: ["Webhooks", "API", "Cron", "Emails", "Dashboards", "No-code friendly"],
+    description: "Étapes répétitives clarifiées, formulaires utiles, alertes et connexions entre outils.",
+    items: ["Formulaires", "Notifications", "Emails", "Webhooks", "Scénarios", "No-code friendly"],
   },
   {
     title: "Agents IA",
-    description: "Assistants bien cadrés, prompts structurés, règles métier et réponses utiles au contexte.",
-    items: ["Prompting", "RAG", "Agents", "OpenAI", "Garde-fous", "Docs métier"],
+    description: "Aides spécialisées avec consignes, contexte, règles de réponse et limites explicites.",
+    items: ["Prompting", "Contexte", "Règles", "Garde-fous", "Docs métier", "Tests de réponses"],
   },
   {
-    title: "Déploiement",
-    description: "Préparation d'une version claire, testable et prête à passer en production sans confusion.",
-    items: ["Recette", "Build", "Documentation", "Passage production", "Suivi lancement", "Base maintenable"],
+    title: "Passage au réel",
+    description: "Synthèse courte avant livraison : vérifier le parcours, les contenus, les priorités et les prochains ajustements.",
+    items: ["Recette", "Priorités", "Documentation", "Retours terrain"],
   },
   {
     title: "Design",

@@ -12,7 +12,7 @@ export default function ProjectsPage() {
           <SectionHeader
             eyebrow="Projets mijotés"
             title="Réalisations, concepts et outils passés par l'atelier."
-            description="Une sélection de plateformes, dashboards, sites de marque, idées MVP et outils en cours. Les projets montrent ce qui est visible côté utilisateur. Le Lab montre les fondations techniques qui permettent de les mettre en ligne, les sécuriser et les maintenir."
+            description="Une sélection de réalisations et de concepts pour juger sur pièces : objectifs, interfaces, choix produit, fonctionnalités et apprentissages."
             tone="balanced"
           />
           <div className="rounded-2xl border border-fog bg-cream p-5 shadow-sm">
@@ -20,8 +20,7 @@ export default function ProjectsPage() {
               Lecture rapide
             </p>
             <p className="mt-3 text-sm leading-6 text-graphite">
-              Cette vitrine rassemble les réalisations visibles, les outils métier et les concepts produits. L'entrée
-              Lab est une passerelle à part pour comprendre les coulisses serveur et déploiement.
+              Chaque carte donne un aperçu concret du besoin traité, du rôle tenu et de la forme livrée ou explorée.
             </p>
           </div>
         </div>

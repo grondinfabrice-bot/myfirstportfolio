@@ -23,6 +23,8 @@ export type Project = {
   category: ProjectCategory;
   status: ProjectStatus;
   summary: string;
+  usage: string;
+  demonstrates: string;
   description: string;
   problem: string;
   solution: string;
@@ -53,6 +55,8 @@ export const projects: Project[] = [
     category: "Plateforme communautaire",
     status: "MVP en ligne",
     summary: "Réseau local pour connecter les créateurs de La Réunion.",
+    usage: "Présenter son profil, publier et créer des connexions locales.",
+    demonstrates: "Produit communautaire, profils, publications, médias et base Supabase reliée à une interface sociale.",
     description:
       "Plateforme sociale locale permettant aux créateurs de publier, présenter leur profil et interagir autour de projets créatifs.",
     problem:
@@ -97,6 +101,8 @@ export const projects: Project[] = [
     category: "Site vitrine / marque",
     status: "Version 1 propre/pro",
     summary: "Site vitrine one-page premium pour un champion du monde WKN de Muay Thai.",
+    usage: "Présenter un parcours sportif et ouvrir la porte aux partenaires.",
+    demonstrates: "Direction artistique sportive, storytelling premium, sections de preuve et responsive mobile propre.",
     description:
       "Landing page officielle sombre, brute et premium pensée pour présenter un champion du monde WKN de Muay Thai, valoriser son titre, son parcours, son partenariat principal avec Terre Sauvage et ouvrir la porte à de nouveaux partenaires, médias et organisateurs.",
     problem:
@@ -131,6 +137,8 @@ export const projects: Project[] = [
     category: "Application métier",
     status: "Concept / module en cours",
     summary: "Dashboard de gestion pour suivre ventes, marges, objectifs et produits.",
+    usage: "Piloter une activité avec moins de tableaux dispersés.",
+    demonstrates: "Traduction d'un besoin métier en indicateurs, alertes, logique de marge et structure de données.",
     description:
       "Outil de gestion destiné à compléter Passkomand avec suivi de chiffre d'affaires, marges, stocks, dates de péremption et rappels de commande.",
     problem:
@@ -162,6 +170,8 @@ export const projects: Project[] = [
     category: "E-commerce / vente digitale",
     status: "Démo en ligne / évolution e-commerce",
     summary: "Boutique d'instrumentales Boom Bap avec licences numériques.",
+    usage: "Présenter, vendre et préparer la livraison de fichiers audio.",
+    demonstrates: "Univers de marque musical, logique catalogue, licences numériques et préparation au paiement.",
     description:
       "Site de vente d'instrumentales hip-hop Boom Bap inspirées des années 90, avec logique de licences, présentation audio et future intégration paiement.",
     problem:
@@ -192,6 +202,8 @@ export const projects: Project[] = [
     category: "Concept / MVP",
     status: "Concept",
     summary: "Application mobile pour comparer deux produits par scan de code-barres.",
+    usage: "Comparer vite deux produits techniques en situation d'achat.",
+    demonstrates: "Cadrage MVP, parcours de comparaison rapide, scan produit et aide à la décision en magasin.",
     description:
       "Application pensée pour les vendeurs et clients en multimédia / électroménager afin de comparer rapidement deux produits techniquement.",
     problem:
@@ -220,6 +232,8 @@ export const projects: Project[] = [
     category: "Site vitrine / marque",
     status: "Site vitrine / futur e-commerce",
     summary: "Site de marque textile outdoor / streetwear.",
+    usage: "Installer un univers de marque avant l'ouverture boutique.",
+    demonstrates: "Identité visuelle, storytelling de marque, présentation produit et base prête pour l'e-commerce.",
     description:
       "Site visuel pour une marque de vêtements inspirée par la nature, l'île et une esthétique brute/premium.",
     problem:
@@ -243,6 +257,8 @@ export const projects: Project[] = [
     category: "Application web",
     status: "Idée / concept",
     summary: "Application de réservation de créneaux pour studio d'enregistrement.",
+    usage: "Réserver des créneaux sans passer par des messages dispersés.",
+    demonstrates: "Parcours de réservation, disponibilité, gestion admin et notifications autour d'un usage simple.",
     description: "Outil permettant à des artistes de réserver des créneaux studio simplement.",
     problem:
       "La réservation de créneaux studio peut vite devenir chaotique lorsqu'elle passe par messages, appels et notes séparées.",
@@ -264,6 +280,8 @@ export const projects: Project[] = [
     category: "Lab technique",
     status: "Réalisé / apprentissage continu",
     summary: "Mise en place d'un environnement VPS complet pour héberger plusieurs sites.",
+    usage: "Héberger plusieurs projets avec une base serveur maintenable.",
+    demonstrates: "Infrastructure VPS, reverse proxy, domaines, certificats HTTPS, processus Node et logs.",
     description:
       "Configuration d'un serveur Ubuntu avec Nginx, domaines, HTTPS, PM2, GitHub, sauvegardes et monitoring simple.",
     problem:

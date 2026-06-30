@@ -7,7 +7,7 @@ export function Footer() {
         <div>
           <p className="font-display text-lg font-black">Fabrik Automates</p>
           <p className="mt-3 max-w-xl text-sm leading-6 text-white/70">
-            Sites, apps & automatisations bien mijotés. Interfaces propres, workflows utiles, agents IA bien cadrés.
+            Atelier web artisanal pour clarifier, concevoir et construire des outils utiles.
           </p>
         </div>
         <div className="flex flex-wrap gap-4 text-sm text-white/70 md:justify-end">

@@ -1,6 +1,7 @@
+import Link from "next/link";
 import { SectionHeader } from "@/components/SectionHeader";
 import { skillBlocks } from "@/data/skills";
-import { Bot, Brush, Database, Lightbulb, Rocket, Workflow } from "lucide-react";
+import { ArrowRight, Bot, Brush, Database, Lightbulb, Rocket, Workflow } from "lucide-react";
 
 const stepStyles = {
   Produit: {
@@ -38,7 +39,7 @@ const stepStyles = {
     soft: "bg-[#19A7B8]/10 text-[#14717C]",
     icon: Bot,
   },
-  "Déploiement": {
+  "Passage au réel": {
     accent: "bg-slate",
     border: "border-slate/30",
     glow: "shadow-[0_18px_48px_rgba(39,56,74,0.12)]",
@@ -53,7 +54,7 @@ const stepOrder = [
   "Sites & interfaces",
   "Applications & données",
   "Automatisations & IA",
-  "Déploiement",
+  "Passage au réel",
 ] as const;
 
 const blockByTitle = new Map(skillBlocks.map((block) => [block.title, block]));
@@ -88,9 +89,9 @@ const toolkitItems = [
   "Priorisation",
   "Architecture produit",
   "Dashboard",
-  "Automatisation",
-  "Agents IA",
-  "Prompting",
+  "Scénarios",
+  "Aide cadrée",
+  "Prompts utiles",
   "Docs métier",
   "No-code friendly",
   "Tests terrain",
@@ -112,7 +113,7 @@ export default function SkillsPage() {
         <SectionHeader
           eyebrow="Ce que je fabrique"
           title="Des compétences reliées à des usages concrets."
-          description="Frontend, backend, automatisation, design et produit travaillent ensemble pour créer des sites, apps et outils qui tiennent debout."
+          description="Ici, on parle de conception : comprendre le besoin, dessiner le parcours, organiser les données, choisir les bons écrans et cadrer les automatisations ou l'IA."
           tone="balanced"
         />
 
@@ -224,11 +225,11 @@ export default function SkillsPage() {
             <div>
               <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato">Boîte à outils</p>
               <h2 className="mt-2 font-display text-2xl font-black leading-tight text-ink">
-                Les briques que je combine pour fabriquer un outil utile.
+                Les briques que je combine selon le besoin réel.
               </h2>
             </div>
             <p className="max-w-xl text-sm leading-6 text-graphite">
-              Pas une collection pour décorer : chaque brique sert à cadrer, concevoir, construire ou améliorer un parcours.
+              Pas une collection pour décorer : chaque brique sert à formuler une décision, rendre un écran plus clair ou simplifier une étape.
             </p>
           </div>
           <div className="mt-5 flex flex-wrap gap-2">
@@ -240,6 +241,25 @@ export default function SkillsPage() {
                 {item}
               </span>
             ))}
+          </div>
+        </div>
+
+        <div className="mt-5 rounded-2xl border border-fog bg-paper p-5 shadow-sm md:p-6">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <div className="max-w-2xl">
+              <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato">Détails techniques</p>
+              <p className="mt-2 text-sm leading-6 text-graphite">
+                La Fabrique reste côté conception et construction du produit. Pour l'hébergement, le serveur, les
+                domaines, les certificats, les processus et la maintenance, le détail est rangé côté Lab.
+              </p>
+            </div>
+            <Link
+              href="/lab"
+              className="inline-flex min-h-11 items-center gap-2 rounded-full border border-fog bg-cream px-5 py-2.5 text-sm font-black text-ink shadow-sm transition hover:-translate-y-0.5 hover:border-tomato hover:text-tomato"
+            >
+              Voir le Lab
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </div>
