@@ -84,9 +84,14 @@ body {
   animation: competence-node-breathe 2.8s ease-in-out infinite;
 }
 
+.lab-reveal {
+  animation: competence-workflow-in 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .competence-workflow-card,
-  .competence-workflow-node {
+  .competence-workflow-node,
+  .lab-reveal {
     animation: none;
   }
 }

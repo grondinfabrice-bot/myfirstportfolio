@@ -32,6 +32,7 @@ export type Project = {
   learnings: string[];
   images: string[];
   liveUrl?: string;
+  detailUrl?: string;
   githubUrl?: string;
 };
 
@@ -87,6 +88,8 @@ export const projects: Project[] = [
       "Relier interface, base de données, authentification et déploiement serveur.",
     ],
     images: ["/images/projects/optimized/krealink.webp"],
+    liveUrl: "https://krealink.re",
+    detailUrl: "/projets/krealink",
   },
   {
     slug: "champion-wkn",
@@ -120,6 +123,7 @@ export const projects: Project[] = [
       "Les images actuelles sont des placeholders : les vraies photos, dates, combats, chiffres et contenus officiels seront intégrés dans une prochaine version.",
     ],
     images: ["/images/projects/optimized/champion-wkn.webp"],
+    detailUrl: "/projets/champion-wkn",
   },
   {
     slug: "passkomand-manager",
@@ -149,6 +153,8 @@ export const projects: Project[] = [
       "Préparer une architecture de données claire pour un outil métier évolutif.",
     ],
     images: ["/images/projects/optimized/passkomand-manager.webp"],
+    liveUrl: "https://passkomand.shop",
+    detailUrl: "/projets/passkomand-manager",
   },
   {
     slug: "boombapchopshop",
@@ -177,6 +183,8 @@ export const projects: Project[] = [
       "Penser la vente de fichiers numériques avec licences, audio et paiement.",
     ],
     images: ["/images/projects/optimized/boombapchopshop.webp"],
+    liveUrl: "https://boombapchopshop.art",
+    detailUrl: "/projets/boombapchopshop",
   },
   {
     slug: "scanvs",
@@ -204,6 +212,7 @@ export const projects: Project[] = [
       "Imaginer une base technique exploitable par vendeurs et clients.",
     ],
     images: [],
+    detailUrl: "/projets/scanvs",
   },
   {
     slug: "terre-sauvage",
@@ -225,6 +234,8 @@ export const projects: Project[] = [
       "Préparer une vitrine capable d'évoluer vers l'e-commerce.",
     ],
     images: ["/images/projects/optimized/terresauvage.webp"],
+    liveUrl: "https://terresauvage.shop",
+    detailUrl: "/projets/terre-sauvage",
   },
   {
     slug: "kaza-reza",
@@ -245,6 +256,7 @@ export const projects: Project[] = [
       "Prévoir les besoins admin sans alourdir l'expérience artiste.",
     ],
     images: ["/images/projects/optimized/kaza-reza.webp"],
+    detailUrl: "/projets/kaza-reza",
   },
   {
     slug: "lab-vps-infrastructure",
@@ -277,6 +289,7 @@ export const projects: Project[] = [
       "Diagnostiquer plus vite les problèmes de déploiement et de configuration.",
     ],
     images: [],
+    detailUrl: "/projets/lab-vps-infrastructure",
   },
 ];
 
