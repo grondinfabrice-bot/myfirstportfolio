@@ -9,11 +9,15 @@ type ProjectDetailHeroProps = {
 
 export function ProjectDetailHero({ project }: ProjectDetailHeroProps) {
   return (
-    <section className="bg-paper pt-9 pb-14 md:pt-[60px] md:pb-20">
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-[0.9fr_1.1fr] md:px-8">
+    <section className="bg-paper pt-9 pb-14 md:pt-16 md:pb-20 lg:pt-18">
+      <div className="site-container grid gap-10 md:grid-cols-[0.9fr_1.1fr]">
         <div>
-          <p className="font-mono text-sm font-bold uppercase text-tomato">{project.category}</p>
-          <h1 className="mt-4 font-display text-5xl font-black leading-tight text-ink md:text-7xl">{project.title}</h1>
+          <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato md:text-sm">
+            {project.category}
+          </p>
+          <h1 className="mt-4 font-display text-5xl font-black leading-tight text-ink md:text-6xl lg:text-7xl">
+            {project.title}
+          </h1>
           <p className="mt-5 text-lg leading-8 text-graphite">{project.summary}</p>
           <div className="mt-6">
             <StatusBadge>{project.status}</StatusBadge>

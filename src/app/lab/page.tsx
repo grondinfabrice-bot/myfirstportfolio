@@ -8,20 +8,21 @@ export default function LabPage() {
   const labProject = getProjectBySlug("lab-vps-infrastructure");
 
   return (
-    <section className="bg-paper pt-11 pb-16 md:pt-[76px] md:pb-24">
-      <div className="mx-auto max-w-7xl px-5 md:px-8">
+    <section className="page-breath bg-paper">
+      <div className="site-container">
         <SectionHeader
           eyebrow="Lab technique"
           title="Infrastructure, déploiement et outils prêts à servir."
           description="Cette partie montre la capacité à faire vivre un projet après la maquette : serveur, HTTPS, DNS, processus Node, GitHub, diagnostic et amélioration continue."
+          tone="balanced"
         />
-        <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="section-stack grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {labItems.map((item) => (
             <LabCard key={item} title={item} />
           ))}
         </div>
         {labProject ? (
-          <div className="mt-12 max-w-xl">
+          <div className="mt-10 max-w-xl md:mt-12">
             <ProjectCard project={labProject} />
           </div>
         ) : null}

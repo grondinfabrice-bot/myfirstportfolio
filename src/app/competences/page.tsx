@@ -4,14 +4,15 @@ import { skillBlocks } from "@/data/skills";
 
 export default function SkillsPage() {
   return (
-    <section className="bg-paper pt-11 pb-16 md:pt-[76px] md:pb-24">
-      <div className="mx-auto max-w-7xl px-5 md:px-8">
+    <section className="page-breath bg-paper">
+      <div className="site-container">
         <SectionHeader
           eyebrow="Ce que je fabrique"
           title="Des compétences reliées à des usages concrets."
           description="Frontend, backend, automatisation, design et produit travaillent ensemble pour créer des sites, apps et outils qui tiennent debout."
+          tone="balanced"
         />
-        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="section-stack grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {skillBlocks.map((block) => (
             <SkillBlock key={block.title} {...block} />
           ))}

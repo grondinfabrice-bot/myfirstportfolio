@@ -8,12 +8,13 @@ export default function ContactPage() {
   const [sent, setSent] = useState(false);
 
   return (
-    <section className="bg-paper pt-11 pb-16 md:pt-[76px] md:pb-24">
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-[0.8fr_1.2fr] md:px-8">
+    <section className="page-breath bg-paper">
+      <div className="site-container grid gap-10 md:grid-cols-[0.8fr_1.2fr]">
         <SectionHeader
           eyebrow="Contact"
           title="Discutons d'un outil à fabriquer."
           description="Vous avez une tâche répétitive, une idée d'app ou un site à rendre plus intelligent ? On peut partir du besoin réel et en faire quelque chose de propre."
+          tone="balanced"
         />
         <form
           className="rounded-2xl border border-fog bg-cream p-6 shadow-sm"

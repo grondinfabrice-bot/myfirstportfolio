@@ -3,11 +3,11 @@ import { Mail } from "lucide-react";
 
 export function ContactSection() {
   return (
-    <section className="bg-slate py-20 text-white">
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 md:grid-cols-[0.9fr_1.1fr] md:px-8">
+    <section className="section-breath bg-slate text-white">
+      <div className="site-container grid gap-10 md:grid-cols-[0.9fr_1.1fr]">
         <div>
-          <p className="font-mono text-sm font-bold uppercase text-tomato">Contact</p>
-          <h2 className="mt-3 font-display text-4xl font-black md:text-5xl">
+          <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato md:text-sm">Contact</p>
+          <h2 className="mt-3 font-display text-[2rem] font-black leading-[1.08] md:text-[2.65rem] lg:text-5xl">
             Une tâche répétitive, une idée d'app, un site à rendre plus intelligent ?
           </h2>
           <p className="mt-5 text-base leading-7 text-white/70">

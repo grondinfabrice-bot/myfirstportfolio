@@ -30,3 +30,25 @@ body {
   outline: 3px solid #2f7d4f;
   outline-offset: 3px;
 }
+
+@layer components {
+  .site-container {
+    @apply mx-auto max-w-7xl px-5 md:px-8;
+  }
+
+  .section-breath {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  .section-breath-compact {
+    @apply py-14 md:py-16 lg:py-20;
+  }
+
+  .page-breath {
+    @apply pt-10 pb-16 md:pt-16 md:pb-24 lg:pt-20;
+  }
+
+  .section-stack {
+    @apply mt-8 md:mt-10;
+  }
+}

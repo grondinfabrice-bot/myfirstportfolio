@@ -35,14 +35,15 @@ export default function Home() {
       <HeroSection />
       <FeaturedProjects />
 
-      <section className="bg-paper py-20">
-        <div className="mx-auto max-w-7xl px-5 md:px-8">
+      <section className="section-breath bg-paper">
+        <div className="site-container">
           <SectionHeader
             eyebrow="Ce que je fabrique"
             title="Des sites, apps et automatisations qui servent le quotidien."
             description="Le design sert la compréhension, la technique sert l'usage, et chaque décision doit aider le projet à avancer sans bruit."
+            tone="balanced"
           />
-          <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          <div className="section-stack grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {creationTypes.map((type) => (
               <div key={type.title} className="rounded-2xl border border-fog bg-cream p-6 shadow-sm">
                 <h3 className="font-display text-xl font-black text-ink">{type.title}</h3>
@@ -53,14 +54,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-cream py-20">
-        <div className="mx-auto max-w-7xl px-5 md:px-8">
+      <section className="section-breath bg-cream">
+        <div className="site-container">
           <SectionHeader
             eyebrow="Fabrique"
             title="Une approche hybride : design, produit, code et automatisation."
             description="Je mélange culture visuelle, logique métier, données et déploiement pour fabriquer des outils utiles, pas seulement de beaux écrans."
+            tone="balanced"
           />
-          <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <div className="section-stack grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {skillBlocks.map((block) => (
               <SkillBlock key={block.title} {...block} />
             ))}
@@ -68,14 +70,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-paper py-20">
-        <div className="mx-auto max-w-7xl px-5 md:px-8">
+      <section className="section-breath-compact bg-paper">
+        <div className="site-container">
           <SectionHeader
             eyebrow="Ma recette de fabrication"
             title="Comprendre, dessiner, construire, automatiser, améliorer."
             description="Je clarifie l'objectif, je priorise le parcours, je conçois l'interface, puis je relie le front, les données, les automatisations et le déploiement."
+            tone="balanced"
           />
-          <div className="mt-10 grid gap-5 md:grid-cols-5">
+          <div className="section-stack grid gap-5 md:grid-cols-5">
             {["Comprendre", "Dessiner", "Construire", "Automatiser", "Améliorer"].map((step, index) => (
               <div key={step} className="rounded-2xl bg-slate p-6 text-white">
                 <p className="font-mono text-sm font-bold text-tomato">0{index + 1}</p>
@@ -86,16 +89,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-cream py-20">
-        <div className="mx-auto max-w-7xl px-5 md:px-8">
+      <section className="section-breath bg-cream">
+        <div className="site-container">
           <SectionHeader
             eyebrow="Lab technique"
             title="Un atelier qui assume aussi l'infrastructure."
             description="Le lab montre la capacité à livrer et maintenir : hébergement, domaines, HTTPS, processus Node, workflow GitHub et diagnostic."
+            tone="balanced"
           />
-          <div className="mt-10 grid gap-6 lg:grid-cols-[320px_1fr]">
+          <div className="section-stack grid gap-6 lg:grid-cols-[320px_1fr]">
             <div className="rounded-2xl bg-slate p-6 text-white shadow-soft">
-              <p className="font-mono text-sm font-bold uppercase text-tomato">VPS réel</p>
+              <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato md:text-sm">VPS réel</p>
               <p className="mt-4 font-display text-3xl font-black leading-tight">Du repo GitHub jusqu'au serveur.</p>
               <p className="mt-4 text-sm leading-6 text-white/70">
                 Cette partie montre la capacité à livrer et maintenir des projets web, pas seulement à les maquettiser.
@@ -110,14 +114,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-paper py-20">
-        <div className="mx-auto max-w-7xl px-5 md:px-8">
+      <section className="section-breath-compact bg-paper">
+        <div className="site-container">
           <div className="max-w-3xl">
-            <p className="font-mono text-sm font-bold uppercase text-tomato">À propos</p>
-            <h2 className="mt-3 font-display text-4xl font-black leading-tight text-ink md:text-5xl">
+            <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato md:text-sm">À propos</p>
+            <h2 className="mt-3 font-display text-[2rem] font-black leading-[1.08] text-ink md:text-[2.65rem] lg:text-5xl">
               Un regard visuel, une logique produit, une envie de fabriquer utile.
             </h2>
-            <p className="mt-5 text-lg leading-8 text-graphite">
+            <p className="mt-5 text-base leading-7 text-graphite md:text-[1.0625rem]">
               Basé à La Réunion, je développe des sites, applications web, dashboards et automatisations. Mon approche
               mélange direction artistique, logique métier, données, IA cadrée et déploiement.
             </p>

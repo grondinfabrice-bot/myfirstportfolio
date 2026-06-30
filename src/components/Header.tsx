@@ -19,7 +19,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-fog bg-paper/90 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
+      <div className="site-container flex items-center justify-between py-3 md:py-4">
         <Link
           href="/"
           className="inline-flex items-center gap-2 font-display text-base font-black tracking-normal text-ink"
@@ -28,7 +28,7 @@ export function Header() {
           <img
             src="/brand/fabrik-automates-icon-64.png"
             alt="Fabrik Automates"
-            className="h-12 w-12 rounded-full object-cover shadow-sm sm:h-9 sm:w-9"
+            className="h-10 w-10 rounded-full object-cover shadow-sm sm:h-9 sm:w-9"
           />
           <span className="hidden sm:inline">Fabrik Automates</span>
         </Link>
@@ -56,7 +56,7 @@ export function Header() {
         className={`border-t border-fog bg-paper px-5 py-4 shadow-sm md:hidden ${isMenuOpen ? "block" : "hidden"}`}
         aria-label="Navigation mobile"
       >
-        <div className="mx-auto grid max-w-7xl gap-2">
+        <div className="site-container grid gap-2">
           {navItems.map((item) => (
             <Link
               key={item.href}
