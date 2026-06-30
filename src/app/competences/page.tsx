@@ -73,7 +73,35 @@ const workflowSteps = stepOrder.map((title) => {
   return blockByTitle.get(title)!;
 });
 
-const toolkitItems = Array.from(new Set(skillBlocks.flatMap((block) => block.items)));
+const toolkitItems = [
+  "Cadrage",
+  "Parcours utilisateur",
+  "UX/UI",
+  "UI design",
+  "Responsive",
+  "Design system léger",
+  "Branding",
+  "Typographie",
+  "Graphisme",
+  "Covers",
+  "MVP",
+  "Priorisation",
+  "Architecture produit",
+  "Dashboard",
+  "Automatisation",
+  "Agents IA",
+  "Prompting",
+  "Docs métier",
+  "No-code friendly",
+  "Tests terrain",
+  "Next.js",
+  "React",
+  "TypeScript",
+  "Tailwind CSS",
+  "Supabase",
+  "API",
+  "OpenAI",
+];
 
 const desktopOrder = ["lg:order-1", "lg:order-2", "lg:order-3", "lg:order-6", "lg:order-5", "lg:order-4"];
 
@@ -195,10 +223,12 @@ export default function SkillsPage() {
           <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato">Boîte à outils</p>
-              <h2 className="mt-2 font-display text-2xl font-black leading-tight text-ink">Les briques que je relie selon le besoin.</h2>
+              <h2 className="mt-2 font-display text-2xl font-black leading-tight text-ink">
+                Les briques que je combine pour fabriquer un outil utile.
+              </h2>
             </div>
             <p className="max-w-xl text-sm leading-6 text-graphite">
-              Pas une collection pour décorer : chaque outil sert une étape du parcours, du cadrage à la mise en ligne.
+              Pas une collection pour décorer : chaque brique sert à cadrer, concevoir, construire ou améliorer un parcours.
             </p>
           </div>
           <div className="mt-5 flex flex-wrap gap-2">

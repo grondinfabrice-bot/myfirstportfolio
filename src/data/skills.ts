@@ -7,7 +7,7 @@ export const skillBlocks = [
   {
     title: "Applications & données",
     description: "Logique métier, authentification, stockage média et modèles de données propres.",
-    items: ["Supabase", "PostgreSQL", "Auth", "Storage", "RLS", "API"],
+    items: ["Supabase", "Modèle de données", "Auth produit", "Médias", "Parcours métier", "API"],
   },
   {
     title: "Automatisations",
@@ -21,8 +21,8 @@ export const skillBlocks = [
   },
   {
     title: "Déploiement",
-    description: "Mise en ligne sur VPS, configuration serveur, HTTPS, processus Node et workflow GitHub.",
-    items: ["VPS Ubuntu", "Nginx", "HTTPS", "DNS", "PM2", "GitHub"],
+    description: "Préparation d'une version claire, testable et prête à passer en production sans confusion.",
+    items: ["Recette", "Build", "Documentation", "Passage production", "Suivi lancement", "Base maintenable"],
   },
   {
     title: "Design",
@@ -43,7 +43,12 @@ export const labItems = [
   "HTTPS avec Certbot",
   "PM2 pour apps Node / Next.js",
   "Supabase PostgreSQL / Auth / Storage",
-  "Automatisations et agents IA",
+  "RLS et règles d'accès",
   "GitHub workflow",
+  "Cloudflare",
+  "Stripe webhooks",
+  "Resend emails",
+  "Cron et tâches planifiées",
+  "Logs serveur",
   "Sauvegardes serveur",
 ];

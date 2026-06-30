@@ -110,14 +110,22 @@ const currentStack = [
   "Ubuntu",
   "Nginx",
   "Certbot",
+  "DNS",
+  "HTTPS",
   "PM2",
-  "Next.js",
   "Supabase",
   "PostgreSQL",
+  "Auth",
+  "Storage",
+  "RLS",
   "GitHub",
   "Cloudflare",
   "Stripe",
   "Resend",
+  "Webhooks",
+  "Cron",
+  "Logs",
+  "Backups",
 ];
 
 export default function LabPage() {
@@ -287,8 +295,8 @@ export default function LabPage() {
         <section className="section-stack lab-reveal" style={{ animationDelay: "440ms" }}>
           <SectionHeader
             eyebrow="Stack actuelle"
-            title="Les outils que j'utilise pour faire tenir les projets debout."
-            description="Une boîte à outils pragmatique pour mettre en ligne, connecter les données et garder une base maintenable."
+            title="Les fondations techniques qui gardent les projets en ligne."
+            description="Une stack pragmatique pour publier, sécuriser, connecter les données, surveiller et maintenir les projets."
             tone="balanced"
           />
           <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">

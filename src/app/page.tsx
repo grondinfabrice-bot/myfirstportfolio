@@ -29,6 +29,8 @@ const creationTypes = [
   },
 ];
 
+const homeLabItems = labItems.slice(0, 6);
+
 export default function Home() {
   return (
     <>
@@ -106,7 +108,7 @@ export default function Home() {
               </p>
             </div>
             <div className="grid gap-4 md:grid-cols-2">
-              {labItems.map((item) => (
+              {homeLabItems.map((item) => (
                 <LabCard key={item} title={item} />
               ))}
             </div>
