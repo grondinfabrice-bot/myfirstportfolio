@@ -86,7 +86,7 @@ export const projects: Project[] = [
       "Structurer un produit communautaire autour de profils, contenus et interactions.",
       "Relier interface, base de données, authentification et déploiement serveur.",
     ],
-    images: ["/projects/krealink-desktop.jpg", "/projects/krealink-mobile.jpg"],
+    images: ["/images/projects/optimized/krealink.webp"],
   },
   {
     slug: "champion-wkn",
@@ -119,11 +119,7 @@ export const projects: Project[] = [
       "Garder une direction artistique sombre, dorée et spectaculaire tout en conservant une interface lisible sur mobile.",
       "Les images actuelles sont des placeholders : les vraies photos, dates, combats, chiffres et contenus officiels seront intégrés dans une prochaine version.",
     ],
-    images: [
-      "/projects/champion-wkn/hero-desktop.png",
-      "/projects/champion-wkn/mobile-hero.png",
-      "/projects/champion-wkn/partners-desktop.png",
-    ],
+    images: ["/images/projects/optimized/champion-wkn.webp"],
   },
   {
     slug: "passkomand-manager",
@@ -152,7 +148,7 @@ export const projects: Project[] = [
       "Transformer des besoins terrain en indicateurs lisibles.",
       "Préparer une architecture de données claire pour un outil métier évolutif.",
     ],
-    images: ["/projects/passkomand-dashboard.jpg"],
+    images: ["/images/projects/optimized/passkomand-manager.webp"],
   },
   {
     slug: "boombapchopshop",
@@ -180,7 +176,7 @@ export const projects: Project[] = [
       "Positionner une boutique digitale avec une identité musicale forte.",
       "Penser la vente de fichiers numériques avec licences, audio et paiement.",
     ],
-    images: ["/projects/boombapchopshop-home.jpg"],
+    images: ["/images/projects/optimized/boombapchopshop.webp"],
   },
   {
     slug: "scanvs",
@@ -207,7 +203,7 @@ export const projects: Project[] = [
       "Réduire une décision complexe à une interface de comparaison rapide.",
       "Imaginer une base technique exploitable par vendeurs et clients.",
     ],
-    images: ["/projects/scanvs-mockup.jpg"],
+    images: [],
   },
   {
     slug: "terre-sauvage",
@@ -228,7 +224,7 @@ export const projects: Project[] = [
       "Construire un univers visuel cohérent autour d'une marque textile.",
       "Préparer une vitrine capable d'évoluer vers l'e-commerce.",
     ],
-    images: ["/projects/terre-sauvage-home.jpg"],
+    images: ["/images/projects/optimized/terresauvage.webp"],
   },
   {
     slug: "kaza-reza",
@@ -248,7 +244,7 @@ export const projects: Project[] = [
       "Penser un parcours de réservation court et fiable.",
       "Prévoir les besoins admin sans alourdir l'expérience artiste.",
     ],
-    images: [],
+    images: ["/images/projects/optimized/kaza-reza.webp"],
   },
   {
     slug: "lab-vps-infrastructure",
@@ -280,7 +276,7 @@ export const projects: Project[] = [
       "Comprendre la chaîne complète entre code, domaine, serveur et HTTPS.",
       "Diagnostiquer plus vite les problèmes de déploiement et de configuration.",
     ],
-    images: ["/projects/lab-vps-schema.jpg"],
+    images: [],
   },
 ];
 
