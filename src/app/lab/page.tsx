@@ -104,7 +104,16 @@ const realSituations = [
   },
 ];
 
-const terminalCommands = ["nginx -t", "pm2 status", "certbot renew --dry-run", "git pull", "npm run build"];
+const terminalCommands = [
+  "idea.check()",
+  "prototype.ready",
+  "build: in progress",
+  "test -> refine -> deploy",
+  "status: experimental",
+];
+
+const benefitStatuses = ["publish", "https", "watch", "data", "logs", "scale"];
+const situationStatuses = ["dns.test", "pm2.watch", "logs.read", "db.link"];
 
 const currentStack = [
   "Ubuntu",
@@ -132,8 +141,9 @@ export default function LabPage() {
   const labProject = getProjectBySlug("lab-vps-infrastructure");
 
   return (
-    <section className="page-breath bg-paper">
+    <section className="lab-page page-breath bg-paper">
       <div className="site-container">
+        <div className="lab-grid-scan" aria-hidden="true" />
         <div className="grid gap-8 lg:grid-cols-[1fr_390px] lg:items-end">
           <div className="max-w-3xl lab-reveal">
             <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato md:text-sm">
@@ -151,7 +161,7 @@ export default function LabPage() {
             </p>
           </div>
 
-          <div className="lab-reveal rounded-2xl border border-fog bg-cream p-5 shadow-sm md:p-6" style={{ animationDelay: "120ms" }}>
+          <div className="lab-console lab-reveal rounded-2xl border border-fog bg-cream p-5 shadow-sm md:p-6" style={{ animationDelay: "120ms" }}>
             <div className="flex items-center gap-3">
               <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-tomato/20 bg-tomato/10 text-tomato">
                 <TerminalSquare className="h-5 w-5" />
@@ -161,10 +171,18 @@ export default function LabPage() {
                 <p className="mt-1 text-sm font-semibold text-ink">Déployer, surveiller, corriger.</p>
               </div>
             </div>
-            <div className="mt-5 rounded-xl border border-slate/15 bg-ink p-4 font-mono text-xs text-cream shadow-sm">
-              {terminalCommands.map((command) => (
-                <p key={command} className="flex gap-2 py-1.5">
-                  <span className="text-basil">$</span>
+            <div className="mt-4 flex flex-wrap gap-2" aria-hidden="true">
+              {["prototype", "test", "build"].map((label) => (
+                <span key={label} className="lab-mini-badge">
+                  <span className="lab-status-dot" />
+                  {label}
+                </span>
+              ))}
+            </div>
+            <div className="lab-terminal mt-5 rounded-xl border border-slate/15 bg-ink p-4 font-mono text-xs text-cream shadow-sm" aria-label="Console décorative du Lab">
+              {terminalCommands.map((command, index) => (
+                <p key={command} className="lab-terminal-line flex gap-2 py-1.5" style={{ animationDelay: `${index * 120}ms` }}>
+                  <span className="text-basil">{index === 0 ? "$" : ">"}</span>
                   <span>{command}</span>
                 </p>
               ))}
@@ -186,9 +204,18 @@ export default function LabPage() {
               return (
                 <article
                   key={benefit.title}
-                  className="group rounded-2xl border border-fog bg-cream p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-tomato/30 hover:shadow-soft md:p-6"
+                  className="lab-module group rounded-2xl border border-fog bg-cream p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-tomato/30 hover:shadow-soft md:p-6"
                   style={{ animationDelay: `${240 + index * 70}ms` }}
                 >
+                  <div className="mb-4 flex items-center justify-between gap-3">
+                    <span className="lab-mini-badge">
+                      <span className="lab-status-dot" />
+                      {benefitStatuses[index]}
+                    </span>
+                    <span className="font-mono text-[0.62rem] font-bold uppercase tracking-[0.08em] text-slate/45">
+                      module
+                    </span>
+                  </div>
                   <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-basil/20 bg-basil/10 text-basil transition group-hover:border-tomato/25 group-hover:bg-tomato/10 group-hover:text-tomato">
                     <Icon className="h-5 w-5" />
                   </span>
@@ -207,15 +234,15 @@ export default function LabPage() {
             description="Du code local au domaine public : dépôt, serveur, Nginx, HTTPS, process applicatif, puis vérifications."
             tone="balanced"
           />
-          <div className="relative mt-8 grid gap-5 lg:grid-cols-5">
-            <div className="absolute left-8 top-8 hidden h-px w-[calc(100%-4rem)] bg-tomato/25 lg:block" />
+          <div className="lab-timeline relative mt-8 grid gap-5 lg:grid-cols-5">
+            <div className="lab-timeline-rail absolute left-8 top-8 hidden h-px w-[calc(100%-4rem)] bg-tomato/25 lg:block" />
             {timelineSteps.map((item, index) => {
               const Icon = item.icon;
 
               return (
                 <article
                   key={item.step}
-                  className="relative rounded-2xl border border-fog bg-cream p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-basil/30 hover:shadow-soft"
+                  className="lab-module relative rounded-2xl border border-fog bg-cream p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-basil/30 hover:shadow-soft"
                 >
                   <div className="absolute -left-3 top-8 h-[calc(100%+1.25rem)] w-px bg-tomato/25 lg:hidden" aria-hidden="true" />
                   <div className="relative z-10 flex items-center gap-3 md:block">
@@ -246,11 +273,15 @@ export default function LabPage() {
               tone="balanced"
             />
             <div className="mt-8 grid gap-4 md:grid-cols-2">
-              {realSituations.map((situation) => (
+              {realSituations.map((situation, index) => (
                 <article
                   key={situation.title}
-                  className="rounded-2xl border border-fog bg-cream p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-tomato/30 hover:shadow-soft"
+                  className="lab-module rounded-2xl border border-fog bg-cream p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-tomato/30 hover:shadow-soft"
                 >
+                  <span className="lab-mini-badge mb-4">
+                    <span className="lab-status-dot" />
+                    {situationStatuses[index]}
+                  </span>
                   <CheckCircle2 className="h-5 w-5 text-basil" />
                   <h2 className="mt-4 font-display text-xl font-black leading-tight text-ink">{situation.title}</h2>
                   <p className="mt-3 text-sm leading-6 text-graphite">{situation.description}</p>
@@ -260,7 +291,7 @@ export default function LabPage() {
           </div>
 
           {labProject ? (
-            <aside className="lab-reveal rounded-2xl border border-fog bg-cream p-5 shadow-sm md:p-6" style={{ animationDelay: "380ms" }}>
+            <aside className="lab-module lab-reveal rounded-2xl border border-fog bg-cream p-5 shadow-sm md:p-6" style={{ animationDelay: "380ms" }}>
               <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato">Étude de cas</p>
               <div className="mt-4 flex items-start justify-between gap-4">
                 <div>
@@ -312,7 +343,7 @@ export default function LabPage() {
           </div>
         </section>
 
-        <section className="section-stack lab-reveal rounded-2xl border border-fog bg-cream p-6 shadow-sm md:p-8 lg:p-10" style={{ animationDelay: "520ms" }}>
+        <section className="lab-module section-stack lab-reveal rounded-2xl border border-fog bg-cream p-6 shadow-sm md:p-8 lg:p-10" style={{ animationDelay: "520ms" }}>
           <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-center">
             <div className="max-w-2xl">
               <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato md:text-sm">Infrastructure</p>

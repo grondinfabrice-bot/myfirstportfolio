@@ -34,9 +34,9 @@ export default function Home() {
     <>
       <HeroSection />
 
-      <section className="section-breath-compact bg-paper">
+      <section className="home-intro-section section-breath-compact bg-paper">
         <div className="site-container">
-          <div className="max-w-3xl">
+          <div className="home-scroll-reveal max-w-3xl">
             <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato md:text-sm">
               Point de départ
             </p>

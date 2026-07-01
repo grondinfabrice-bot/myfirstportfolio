@@ -6,7 +6,7 @@ type LabCardProps = {
 
 export function LabCard({ title }: LabCardProps) {
   return (
-    <article className="flex items-center gap-3 rounded-lg border border-fog bg-cream p-4 shadow-sm">
+    <article className="lab-module flex items-center gap-3 rounded-lg border border-fog bg-cream p-4 shadow-sm">
       <CheckCircle2 className="h-5 w-5 shrink-0 text-basil" />
       <p className="font-semibold text-ink">{title}</p>
     </article>
