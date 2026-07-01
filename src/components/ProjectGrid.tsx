@@ -16,8 +16,8 @@ export function ProjectGrid({ projects, showLabGateway = false, showProof = fals
 
   return (
     <div className="grid gap-6 md:grid-cols-2 md:items-stretch xl:grid-cols-3">
-      {visibleProjects.map((project) => (
-        <ProjectCard key={project.slug} project={project} showProof={showProof} />
+      {visibleProjects.map((project, index) => (
+        <ProjectCard key={project.slug} project={project} showProof={showProof} revealIndex={index} />
       ))}
       {showLabGateway ? <LabGatewayCard /> : null}
     </div>

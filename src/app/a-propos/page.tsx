@@ -77,7 +77,7 @@ export default function AboutPage() {
             description="Un atelier personnel à la croisée du design graphique, de la culture Boom Bap, du multimédia et du développement web utile."
             tone="balanced"
           />
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-graphite">
+          <p className="soft-page-reveal mt-6 max-w-3xl text-lg leading-8 text-graphite" style={{ animationDelay: "80ms" }}>
             Je ne vois pas Fabrik Automates comme une simple vitrine technique. C'est une façon de fabriquer des projets
             web avec un regard créatif, une méthode lisible et le souci de livrer quelque chose qui tient dans la vraie
             vie.
@@ -85,7 +85,11 @@ export default function AboutPage() {
 
           <div className="mt-9 grid max-w-4xl gap-5">
             {aboutBlocks.map((block, index) => (
-              <article key={block.title} className="rounded-2xl border border-fog bg-cream p-5 shadow-sm md:p-6">
+              <article
+                key={block.title}
+                className="soft-page-reveal rounded-2xl border border-fog bg-cream p-5 shadow-sm md:p-6"
+                style={{ animationDelay: `${120 + index * 100}ms` }}
+              >
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                   <div>
                     <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato">
@@ -104,7 +108,7 @@ export default function AboutPage() {
             ))}
           </div>
 
-          <div className="mt-5 rounded-2xl border border-fog bg-slate p-5 text-white shadow-sm md:p-6">
+          <div className="soft-page-reveal mt-5 rounded-2xl border border-fog bg-slate p-5 text-white shadow-sm md:p-6" style={{ animationDelay: "520ms" }}>
             <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato">
               Ce que je veux apporter
             </p>
@@ -126,7 +130,7 @@ export default function AboutPage() {
         </div>
 
         <div className="w-full max-w-sm lg:ml-auto lg:max-w-none">
-          <div className="rounded-2xl border border-fog bg-cream p-3 shadow-soft">
+          <div className="soft-page-reveal rounded-2xl border border-fog bg-cream p-3 shadow-soft" style={{ animationDelay: "140ms" }}>
             <div className="relative flex aspect-[4/5] flex-col items-center justify-center overflow-hidden rounded-xl border border-fog bg-paper text-center">
               <div className="absolute inset-0 opacity-[0.24] [background-image:linear-gradient(rgba(39,56,74,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(39,56,74,0.12)_1px,transparent_1px)] [background-size:32px_32px]" />
               <div className="relative flex h-20 w-20 items-center justify-center rounded-full border border-fog bg-cream text-slate shadow-sm">
@@ -150,8 +154,12 @@ export default function AboutPage() {
           </div>
 
           <div className="mt-5 grid gap-3">
-            {sideNotes.map((note) => (
-              <div key={note.label} className="rounded-2xl border border-fog bg-cream p-5 shadow-sm">
+            {sideNotes.map((note, index) => (
+              <div
+                key={note.label}
+                className="soft-page-reveal rounded-2xl border border-fog bg-cream p-5 shadow-sm"
+                style={{ animationDelay: `${220 + index * 90}ms` }}
+              >
                 <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato">{note.label}</p>
                 <p className="mt-3 text-sm leading-6 text-graphite">{note.text}</p>
               </div>

@@ -55,7 +55,7 @@ export default function ContactPage() {
     <section className="page-breath bg-paper">
       <div className="site-container grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-12">
         <div className="grid gap-8">
-          <div className="max-w-3xl">
+          <div className="soft-page-reveal max-w-3xl">
             <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato md:text-sm">Contact</p>
             <h1 className="mt-3 font-display text-[2.45rem] font-black leading-[1.02] text-ink md:text-[3.35rem]">
               Démarrons avec ce que vous avez.
@@ -66,7 +66,7 @@ export default function ContactPage() {
             </p>
           </div>
 
-          <div className="rounded-2xl border border-fog bg-cream p-5 shadow-sm md:p-6">
+          <div className="soft-page-reveal rounded-2xl border border-fog bg-cream p-5 shadow-sm md:p-6" style={{ animationDelay: "90ms" }}>
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-tomato/10 text-tomato">
                 <Sparkles className="h-5 w-5" aria-hidden="true" />
@@ -81,8 +81,12 @@ export default function ContactPage() {
               </div>
             </div>
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
-              {startingSituations.map((type) => (
-                <article key={type.title} className="rounded-xl border border-fog bg-paper/80 p-4">
+              {startingSituations.map((type, index) => (
+                <article
+                  key={type.title}
+                  className="soft-page-reveal rounded-xl border border-fog bg-paper/80 p-4"
+                  style={{ animationDelay: `${140 + index * 80}ms` }}
+                >
                   <h3 className="font-display text-lg font-black leading-tight text-ink">{type.title}</h3>
                   <p className="mt-2 text-sm leading-6 text-graphite">{type.description}</p>
                 </article>
@@ -90,13 +94,17 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-fog bg-cream p-5 shadow-sm md:p-6">
+          <div className="soft-page-reveal rounded-2xl border border-fog bg-cream p-5 shadow-sm md:p-6" style={{ animationDelay: "180ms" }}>
             <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato">
               Comment ça se passe
             </p>
             <div className="mt-5 grid gap-4">
               {processSteps.map((step, index) => (
-                <article key={step.title} className="grid gap-3 rounded-xl border border-fog bg-paper/80 p-4 sm:grid-cols-[52px_1fr]">
+                <article
+                  key={step.title}
+                  className="soft-page-reveal grid gap-3 rounded-xl border border-fog bg-paper/80 p-4 sm:grid-cols-[52px_1fr]"
+                  style={{ animationDelay: `${220 + index * 90}ms` }}
+                >
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-slate text-sm font-black text-white">
                     {String(index + 1).padStart(2, "0")}
                   </div>
@@ -110,7 +118,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <div className="rounded-[1.35rem] border border-fog bg-cream/80 p-3 shadow-soft lg:sticky lg:top-28">
+        <div className="soft-page-reveal rounded-[1.35rem] border border-fog bg-cream/80 p-3 shadow-soft lg:sticky lg:top-28" style={{ animationDelay: "120ms" }}>
           <form
             className="rounded-2xl border border-fog bg-cream p-5 shadow-sm md:p-7"
             onSubmit={(event) => {
