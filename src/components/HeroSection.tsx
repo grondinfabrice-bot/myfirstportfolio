@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Bot, Mail, Server, Sparkles } from "lucide-react";
+import { ArrowRight, Bot, Focus, Mail, Server, Sparkles } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -67,12 +67,14 @@ export function HeroSection() {
             </div>
             <div className="mt-4 grid grid-cols-2 gap-4">
               <div className="rounded-xl border border-fog bg-paper p-4">
-                <p className="font-display text-3xl font-black text-ink">5</p>
-                <p className="text-sm text-graphite">portes d'entrée</p>
+                <Focus className="mb-3 h-5 w-5 text-tomato" aria-hidden="true" />
+                <p className="text-sm font-semibold leading-6 text-graphite">
+                  Clarifier le projet dès le départ : ce qu'il doit résoudre, pour qui, et par où commencer.
+                </p>
               </div>
               <div className="rounded-xl bg-basil p-4 text-white shadow-sm">
                 <Server className="mb-3 h-5 w-5" />
-                <p className="text-sm font-semibold">Un site pour vérifier, pas une brochure qui explique tout.</p>
+                <p className="text-sm font-semibold">Une base claire pour comprendre ce qui peut être construit.</p>
               </div>
               <div className="col-span-2 rounded-xl border border-fog bg-paper p-4 text-slate">
                 <Bot className="mb-3 h-5 w-5 text-tomato" />

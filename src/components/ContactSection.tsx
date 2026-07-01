@@ -1,31 +1,10 @@
 import Link from "next/link";
 import { Mail } from "lucide-react";
 
-const contactStarters = [
-  {
-    title: "Idée",
-    description: "Même encore floue.",
-  },
-  {
-    title: "Blocage",
-    description: "Technique, visuel ou organisationnel.",
-  },
-  {
-    title: "Lien",
-    description: "Site, outil, maquette ou exemple.",
-  },
-  {
-    title: "Capture",
-    description: "Pour montrer ce qui coince.",
-  },
-  {
-    title: "Routine",
-    description: "Une tâche à simplifier.",
-  },
-  {
-    title: "Question",
-    description: "Pour cadrer avant de construire.",
-  },
+const contactInputs = [
+  "Une idée encore floue",
+  "Un blocage à clarifier",
+  "Une capture ou un lien",
 ];
 
 export function ContactSection() {
@@ -52,16 +31,20 @@ export function ContactSection() {
               </Link>
             </div>
 
-            <div className="flex flex-wrap gap-2 md:justify-end">
-              {contactStarters.map((item) => (
-                <span
-                  key={item.title}
-                  className="rounded-full border border-white/10 bg-white/6 px-3 py-1.5 text-xs font-bold text-white/55"
-                  title={item.description}
-                >
-                  {item.title}
-                </span>
-              ))}
+            <div className="rounded-xl border border-white/10 bg-white/6 p-4 md:justify-self-end md:p-5">
+              <p className="font-mono text-xs font-bold uppercase tracking-[0.08em] text-tomato">
+                Ce que vous pouvez envoyer
+              </p>
+              <div className="mt-4 grid gap-3">
+                {contactInputs.map((item, index) => (
+                  <div key={item} className="grid grid-cols-[2.2rem_1fr] items-start gap-3 border-t border-white/10 pt-3 first:border-t-0 first:pt-0">
+                    <span className="font-mono text-xs font-black text-white/35">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <p className="text-sm font-semibold leading-6 text-white/70">{item}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

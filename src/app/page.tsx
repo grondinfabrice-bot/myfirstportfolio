@@ -57,8 +57,8 @@ export default function Home() {
         <div className="site-container">
           <SectionHeader
             eyebrow="Où aller ensuite"
-            title="Choisissez l'entrée qui vous aide le plus."
-            description="L'accueil reste volontairement court : les pages internes prennent le relais selon ce que vous voulez vérifier."
+            title="Une vue d'ensemble pour entrer dans l'atelier"
+            description="La page d'accueil pose les bases : ce que je conçois, comment je travaille et comment un besoin peut devenir une première interface testable. Les pages suivantes détaillent chaque facette du travail : les projets réalisés, la méthode de fabrication, les bases techniques et les pistes à explorer ensemble."
             tone="balanced"
           />
           <div className="section-stack grid gap-5 md:grid-cols-3">
