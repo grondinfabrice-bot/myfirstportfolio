@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { LabCard } from "@/components/LabCard";
 import { SectionHeader } from "@/components/SectionHeader";
+import { ViewportReveal } from "@/components/ViewportReveal";
 import { labItems } from "@/data/skills";
 import { getProjectBySlug } from "@/data/projects";
 
@@ -190,7 +191,7 @@ export default function LabPage() {
           </div>
         </div>
 
-        <section className="section-stack lab-reveal" style={{ animationDelay: "180ms" }}>
+        <section className="section-stack">
           <SectionHeader
             eyebrow="Bénéfices client"
             title="Ce que ça apporte au projet."
@@ -202,32 +203,30 @@ export default function LabPage() {
               const Icon = benefit.icon;
 
               return (
-                <article
-                  key={benefit.title}
-                  className="lab-module group rounded-2xl border border-fog bg-cream p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-tomato/30 hover:shadow-soft md:p-6"
-                  style={{ animationDelay: `${240 + index * 70}ms` }}
-                >
-                  <div className="mb-4 flex items-center justify-between gap-3">
-                    <span className="lab-mini-badge">
-                      <span className="lab-status-dot" />
-                      {benefitStatuses[index]}
+                <ViewportReveal key={benefit.title} delay={index * 90}>
+                  <article className="lab-module group h-full rounded-2xl border border-fog bg-cream p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-tomato/30 hover:shadow-soft md:p-6">
+                    <div className="mb-4 flex items-center justify-between gap-3">
+                      <span className="lab-mini-badge">
+                        <span className="lab-status-dot" />
+                        {benefitStatuses[index]}
+                      </span>
+                      <span className="font-mono text-[0.62rem] font-bold uppercase tracking-[0.08em] text-slate/45">
+                        module
+                      </span>
+                    </div>
+                    <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-basil/20 bg-basil/10 text-basil transition group-hover:border-tomato/25 group-hover:bg-tomato/10 group-hover:text-tomato">
+                      <Icon className="h-5 w-5" />
                     </span>
-                    <span className="font-mono text-[0.62rem] font-bold uppercase tracking-[0.08em] text-slate/45">
-                      module
-                    </span>
-                  </div>
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-basil/20 bg-basil/10 text-basil transition group-hover:border-tomato/25 group-hover:bg-tomato/10 group-hover:text-tomato">
-                    <Icon className="h-5 w-5" />
-                  </span>
-                  <h2 className="mt-5 font-display text-2xl font-black leading-tight text-ink">{benefit.title}</h2>
-                  <p className="mt-3 text-sm leading-6 text-graphite">{benefit.description}</p>
-                </article>
+                    <h2 className="mt-5 font-display text-2xl font-black leading-tight text-ink">{benefit.title}</h2>
+                    <p className="mt-3 text-sm leading-6 text-graphite">{benefit.description}</p>
+                  </article>
+                </ViewportReveal>
               );
             })}
           </div>
         </section>
 
-        <section className="section-stack lab-reveal" style={{ animationDelay: "260ms" }}>
+        <section className="section-stack">
           <SectionHeader
             eyebrow="Du local au site en ligne"
             title="Le chemin technique reste lisible."
@@ -240,25 +239,24 @@ export default function LabPage() {
               const Icon = item.icon;
 
               return (
-                <article
-                  key={item.step}
-                  className="lab-module relative rounded-2xl border border-fog bg-cream p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-basil/30 hover:shadow-soft"
-                >
-                  <div className="absolute -left-3 top-8 h-[calc(100%+1.25rem)] w-px bg-tomato/25 lg:hidden" aria-hidden="true" />
-                  <div className="relative z-10 flex items-center gap-3 md:block">
-                    <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-tomato/25 bg-paper text-tomato shadow-sm">
-                      <Icon className="h-5 w-5" />
-                    </span>
-                    <div className="md:mt-5">
-                      <p className="font-mono text-xs font-black uppercase tracking-[0.08em] text-tomato">Étape {item.step}</p>
-                      <h2 className="mt-1 font-display text-xl font-black leading-tight text-ink">{item.title}</h2>
+                <ViewportReveal key={item.step} className="h-full" delay={index * 110}>
+                  <article className="lab-module relative h-full rounded-2xl border border-fog bg-cream p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-basil/30 hover:shadow-soft">
+                    <div className="absolute -left-3 top-8 h-[calc(100%+1.25rem)] w-px bg-tomato/25 lg:hidden" aria-hidden="true" />
+                    <div className="relative z-10 flex items-center gap-3 md:block">
+                      <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-tomato/25 bg-paper text-tomato shadow-sm">
+                        <Icon className="h-5 w-5" />
+                      </span>
+                      <div className="md:mt-5">
+                        <p className="font-mono text-xs font-black uppercase tracking-[0.08em] text-tomato">Étape {item.step}</p>
+                        <h2 className="mt-1 font-display text-xl font-black leading-tight text-ink">{item.title}</h2>
+                      </div>
                     </div>
-                  </div>
-                  <p className="mt-4 text-sm leading-6 text-graphite">{item.description}</p>
-                  {index < timelineSteps.length - 1 ? (
-                    <ArrowRight className="absolute -right-3 top-10 hidden h-5 w-5 text-tomato lg:block" />
-                  ) : null}
-                </article>
+                    <p className="mt-4 text-sm leading-6 text-graphite">{item.description}</p>
+                    {index < timelineSteps.length - 1 ? (
+                      <ArrowRight className="absolute -right-3 top-10 hidden h-5 w-5 text-tomato lg:block" />
+                    ) : null}
+                  </article>
+                </ViewportReveal>
               );
             })}
           </div>
